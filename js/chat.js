@@ -64,7 +64,7 @@ class SASChatbot {
                     <div class="bg-black/60 backdrop-blur-md p-4 flex items-center justify-between border-b border-white/5">
                         <div class="flex items-center gap-3">
                             <div class="relative">
-                                <img src="images/nivo-avatar.png" class="w-8 h-8 rounded-full border border-white/10 object-cover" alt="Nivo">
+                                <img src="images/nivo-avatar.jpg" class="w-8 h-8 rounded-full border border-white/10 object-cover" alt="Nivo">
                                 <div class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-500 border-2 border-zinc-900"></div>
                             </div>
                             <div>
