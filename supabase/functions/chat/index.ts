@@ -28,9 +28,8 @@ serve(async (req) => {
         }
 
         const genAI = new GoogleGenerativeAI(apiKey)
-        const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
 
-        const systemPrompt = `You are Nivo, the Senior Digital Architect and AI Assistant for Sun Air Shades Studio in Clearwater, Florida.
+        const systemInstruction = `You are Nivo, the Senior Digital Architect and AI Assistant for Sun Air Shades Studio in Clearwater, Florida.
 You represent "The Aesthetic of Trust." Your goal is to consultatively guide users toward a free Strategy Audit/Measurement.
 
 IDENTITY:
@@ -60,6 +59,11 @@ COMPLIANCE:
 - Do not guarantee exact dollar savings. Use "projections" or "efficiency analysis."
 - Florida FIPA & FDUTPA compliant.`
 
+        const model = genAI.getGenerativeModel({
+            model: 'gemini-2.0-flash',
+            systemInstruction: systemInstruction
+        })
+
         const chat = model.startChat({
             history: [
                 {
@@ -76,7 +80,7 @@ COMPLIANCE:
             },
         })
 
-        const result = await chat.sendMessage(systemPrompt + "\n\nUser Message: " + userMessage)
+        const result = await chat.sendMessage(userMessage)
         const response = await result.response
         const text = response.text()
 

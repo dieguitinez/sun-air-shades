@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const distDir = path.join(__dirname, 'dist');
-const rootFiles = ['index.html'];
+const rootFiles = ['index.html', 'visualizer_bg_custom.jpg', 'hero_bg.png', 'hero_user.jpg', 'sas-logo.png', 'sas-logo-final.png', 'favicon.ico'];
 const rootDirs = ['js', 'images', 'textures'];
 
 // Ensure dist exists

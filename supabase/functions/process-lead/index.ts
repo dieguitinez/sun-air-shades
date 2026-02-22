@@ -57,7 +57,7 @@ serve(async (req) => {
           </div>
 
           <p style="font-size: 13px; color: #9ca3af;"><strong>Client Message:</strong><br>${message}</p>
-          <p style="font-size: 11px; color: #4b5563; margin-top: 40px;">System Notice: This data is securely stored in Supabase Project wagqcziphaxffghdwojb.</p>
+          <p style="font-size: 11px; color: #4b5563; margin-top: 40px;">System Notice: This data is securely stored in Supabase Project osmdpnykhgeslxhcqczz.</p>
         </div>
       `
 

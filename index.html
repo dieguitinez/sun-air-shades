@@ -1017,11 +1017,11 @@
                             <div className="flex items-center gap-3 h-[320px] sm:h-[400px]">
 
                                 {/* LEFT FLANK: Vertical Height/Coverage Dial */}
-                                <div className="flex flex-col items-center gap-3 h-full py-6 bg-black/40 rounded-3xl border border-white/5 w-12 shadow-2xl backdrop-blur-md">
-                                    <div className="text-[8px] uppercase tracking-widest text-gold-500 font-black [writing-mode:vertical-lr] rotate-180">
+                                <div className="flex flex-col items-center gap-3 h-full py-6 bg-black/40 rounded-3xl border border-white/5 w-14 shadow-2xl backdrop-blur-md relative">
+                                    <div className="text-[8px] uppercase tracking-widest text-gold-500 font-black [writing-mode:vertical-lr] rotate-180 absolute left-2 top-1/2 -translate-y-1/2 opacity-40">
                                         {lang === 'en' ? 'SHADE LIFT' : 'ALTURA'}
                                     </div>
-                                    <div className="flex-1 relative w-full flex justify-center py-2">
+                                    <div className="flex-1 relative w-full flex justify-center py-4 overflow-hidden">
                                         <input
                                             type="range"
                                             value={shadeHeight}
@@ -1029,11 +1029,16 @@
                                             style={{
                                                 appearance: 'none',
                                                 WebkitAppearance: 'none',
-                                                width: '4px',
-                                                height: '100%',
-                                                background: 'rgba(255,255,255,0.05)',
+                                                width: '240px',
+                                                height: '4px',
+                                                background: 'rgba(255,255,255,0.1)',
                                                 borderRadius: '2px',
-                                                writingMode: 'bt-lr'
+                                                transform: 'rotate(-90deg)',
+                                                position: 'absolute',
+                                                top: '50%',
+                                                left: '50%',
+                                                marginLeft: '-120px',
+                                                marginTop: '-2px'
                                             }}
                                             className="vertical-range-slider accent-gold-500"
                                         />
@@ -1041,16 +1046,17 @@
                                             __html: `
                                             .vertical-range-slider::-webkit-slider-thumb {
                                                 -webkit-appearance: none;
-                                                width: 16px;
-                                                height: 16px;
+                                                width: 24px;
+                                                height: 24px;
                                                 background: #eab308;
                                                 border-radius: 50%;
                                                 cursor: pointer;
-                                                box-shadow: 0 0 10px rgba(234, 179, 8, 0.4);
+                                                box-shadow: 0 0 15px rgba(234, 179, 8, 0.6);
+                                                border: 2px solid white;
                                             }
                                         `}} />
                                     </div>
-                                    <div className="text-[10px] text-white font-mono bg-black/40 px-2 py-1 rounded-lg border border-white/5">
+                                    <div className="text-[10px] text-white font-mono bg-black px-2 py-1 rounded border border-white/10 z-10 mb-2">
                                         {100 - shadeHeight}%
                                     </div>
                                 </div>
@@ -1058,11 +1064,14 @@
                                 {/* CENTER PIECE: THE IMAGE (Responsive Square) */}
                                 <div className="flex-1 h-full rounded-3xl overflow-hidden border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] relative group bg-zinc-950">
                                     {/* Procedural Backdrop */}
-                                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <div className="absolute inset-0 flex items-center justify-center">
                                         <img
                                             src="visualizer_bg_custom.jpg"
-                                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                                            alt="Preview"
+                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                            alt="Visualizer Wallpaper"
+                                            onError={(e) => {
+                                                e.target.src = 'visualizer-bg-v2.jpg'; // Fallback if custom fails
+                                            }}
                                         />
                                     </div>
 
