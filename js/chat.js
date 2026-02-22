@@ -9,8 +9,8 @@ class SASChatbot {
 
         // Supabase Configuration (Sovereign Infrastructure)
         this.config = {
-            edgeFunctionUrl: 'https://wagqcziphaxffghdwojb.supabase.co/functions/v1/chat',
-            anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndhZ3FjemlwaGF4ZmZnaGR3b2piIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEzODA3MTEsImV4cCI6MjA4Njk1NjcxMX0.RzdAAB-4i4VsG15Ot0dhi8Y0ruR2uOcRJsIv7atBcMI'
+            edgeFunctionUrl: 'https://osmdpnykhgeslxhcqczz.supabase.co/functions/v1/chat',
+            anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9zbWRwbnlraGdlc2x4aGNxY3p6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3NDMyMTgsImV4cCI6MjA4NzMxOTIxOH0.KcSyPD12bfjt6oOYMX-vONngRBjS_lQJ_XBbwN3V0Eo'
         };
 
         this.knowledge = {
