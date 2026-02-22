@@ -60,88 +60,26 @@ COMPLIANCE:
 - Florida FIPA & FDUTPA compliant.`
 
         const model = genAI.getGenerativeModel({
-            model: 'gemini-2.0-flash',
+            model: 'gemini-2.5-flash',
             systemInstruction: systemInstruction
-        })
-
-        const chat = model.startChat({
-            history: [
-                {
-                    role: "user",
-                    parts: [{ text: "Hello, who are you?" }],
-                },
-                {
-                    role: "model",
-                    parts: [{ text: "I am Nivo, Senior Digital Architect at Sun Air Shades. I'm here to help you engineer the perfect light and climate control for your space. How can I assist you today?" }],
-                },
-            ],
-            generationConfig: {
-                maxOutputTokens: 200,
-            },
         })
 
         // Intent detection for Audit Wizard
         const auditTriggers = ["audit", "medición", "cita", "presupuesto", "quote", "form", "medicion", "visita"]
-        let text = '';
-        let shouldTriggerAudit = false;
 
-        try {
-            let model;
-            try {
-                // Using Gemini 2.5 Flash as per "perfect" architecture requirements
-                model = genAI.getGenerativeModel({
-                    model: 'gemini-2.5-flash',
-                    systemInstruction: systemInstruction
-                })
-                // Test if model exists/works with a minimal call if needed, 
-                // but for Edge Functions, we usually just catch the failure in the main call.
-            } catch (e) {
-                console.warn("[NIVO BRIDGE] Gemini 2.5 unavailable, falling back to 1.5");
-                model = genAI.getGenerativeModel({
-                    model: 'gemini-1.5-flash',
-                    systemInstruction: systemInstruction
-                })
-            }
+        const result = await model.generateContent(userMessage)
+        const text = result.response.text().trim()
+        const shouldTriggerAudit = auditTriggers.some(term => text.toLowerCase().includes(term.toLowerCase()))
 
-            const result = await model.generateContent(userMessage)
-            text = result.response.text().trim()
-            shouldTriggerAudit = auditTriggers.some(term => text.toLowerCase().includes(term.toLowerCase()))
-
-            return new Response(JSON.stringify({
-                reply: text,
-                triggerAudit: shouldTriggerAudit
-            }), {
-                headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-            })
-
-        } catch (error) {
-            console.error("[NIVO BRIDGE ERROR]:", error);
-            // Emergency Fallback
-            if (error.message.includes('404') || error.message.includes('not found')) {
-                try {
-                    const fallbackModel = genAI.getGenerativeModel({ model: 'gemini-1.5-flash', systemInstruction });
-                    const result = await fallbackModel.generateContent(userMessage);
-                    text = result.response.text().trim();
-                    shouldTriggerAudit = auditTriggers.some(term => text.toLowerCase().includes(term.toLowerCase()));
-                    return new Response(JSON.stringify({
-                        reply: text,
-                        triggerAudit: shouldTriggerAudit
-                    }), {
-                        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-                    });
-                } catch (e2) {
-                    console.error("[KAI EMERGENCY FALLBACK FAILED]", e2.message);
-                }
-            }
-
-            return new Response(JSON.stringify({ error: error.message }), {
-                status: 500,
-                headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-            })
-        }
+        return new Response(JSON.stringify({
+            reply: text,
+            triggerAudit: shouldTriggerAudit
+        }), {
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        })
 
     } catch (error) {
-        console.error(error)
+        console.error("[NIVO BRIDGE ERROR]:", error);
         return new Response(JSON.stringify({ error: error.message }), {
             status: 500,
             headers: { ...corsHeaders, 'Content-Type': 'application/json' },
