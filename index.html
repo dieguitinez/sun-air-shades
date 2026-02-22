@@ -15,18 +15,35 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sun Air Shades Studio | Hurricane Armor. Mansion Aesthetics.</title>
+    <title>Sun Air Shades Studio | High-Quality Florida Shading</title>
     <meta name="description"
-        content="Professional motorized shading systems for Florida's luxury homes. High performance, 24V constant power, and built locally in Clearwater. Sun Air Shades Studio engineers privacy and hurricane-ready aesthetics.">
+        content="Professional motorized shading systems for Florida's luxury homes. High performance at low electricity cost, constant low-voltage power, and built locally in Clearwater. Sun Air Shades Studio engineers privacy and light control.">
+    <meta name="keywords"
+        content="luxury shades, motorized blinds, bug screens, clearwater, florida, sun air shades studio, wind protection">
 
-    <!-- Fonts -->
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sunairshades.com/">
+    <meta property="og:title" content="Sun Air Shades | High-Quality Shading">
+    <meta property="og:description"
+        content="The only viable solution for high-end coastal homes. Wind resistant and battery-free.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1628148386377-df67e21a2c85?q=80&w=2070">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Sun Air Shades | High-Quality Florida Shading">
+    <meta property="twitter:description"
+        content="Aesthetic Excellence. Professional Standards. Built in Clearwater, FL.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1628148386377-df67e21a2c85?q=80&w=2070">
+
+    <!-- FONTS: Playfair Display (Serif) & Manrope (Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
 
-    <!-- Tailwind CSS -->
+    <!-- TAILWIND CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -34,11 +51,16 @@
                 extend: {
                     colors: {
                         gold: { 400: '#D4AF37', 500: '#C5A028', 600: '#B08D1A' },
-                        slate: { 950: '#020617', 900: '#0f172a', 800: '#1e293b' },
+                        obsidian: '#0a0a0a',
+                        charcoal: '#121212',
+                        zinc: '#1a1a1a',
                     },
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
                         sans: ['Manrope', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                     }
                 }
             }
@@ -46,16 +68,17 @@
     </script>
 
     <style>
+        /* CustomScrollbar */
         ::-webkit-scrollbar {
             width: 6px;
         }
 
         ::-webkit-scrollbar-track {
-            background: #020617;
+            background: #0a0a0a;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #334155;
+            background: #333;
             border-radius: 3px;
         }
 
@@ -65,47 +88,217 @@
         }
 
         .glass-panel {
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.03);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .hero-video-overlay {
-            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.4), rgba(2, 6, 23, 0.8));
+        /* Video Fallback */
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            background: #111;
         }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Sun Air Shades",
+      "image": "https://sunairshades.com/sas-logo.png",
+      "telephone": "+1-727-754-5267",
+      "email": "admin@sunair-shades.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2015 Weaver Park Dr",
+        "addressLocality": "Clearwater",
+        "addressRegion": "FL",
+        "postalCode": "33765",
+        "addressCountry": "US"
+      },
+      "url": "https://sunairshades.com",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "15:00"
+      },
+      "priceRange": "$$$"
+    }
+    </script>
+
+    <!-- MARKETING INFRASTRUCTURE (FREE TIER) -->
+    <!-- 1. Google Analytics 4 (Replace G-XXXXXXXXXX with your ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PL2292Y93"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-5PL2292Y93');
+    </script>
+
+    <!-- 2. Meta Pixel Code (Replace 1234567890 with your ID) -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '884817154140690');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=884817154140690&ev=PageView&noscript=1" /></noscript>
+    <!-- 3. Microsoft Clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "CLARITY_ID_HERE");
+    </script>
+    <!-- End Microsoft Clarity -->
 </head>
 
-<body class="bg-slate-950 text-slate-50 antialiased overflow-x-hidden">
+<body class="bg-obsidian text-white antialiased overflow-x-hidden">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <!-- REACT ROOT -->
     <div id="root"></div>
 
-    <!-- Dependencies -->
+    <!-- REACT DEPENDENCIES (UMD) - PRODUCTION MODE -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/framer-motion@11.0.8/dist/framer-motion.js"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+    <!-- REACT APP -->
     <script type="text/babel">
         const { useState, useEffect, useRef } = React;
-        const { motion, AnimatePresence } = window.Motion;
+        const { motion, AnimatePresence, useScroll, useTransform } = window.Motion;
 
-        // --- ICONS ---
+        // Global State (Context-like)
+        const useLang = () => {
+            const [lang, setLang] = useState('en');
+            return { lang, setLang };
+        };
+
+        // --- ICONS (Inline SVG for Zero Dependency Stability) ---
         const Icons = {
-            Menu: ({ c }) => <svg className={c} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 6h16M4 12h16M4 18h16" /></svg>,
-            X: ({ c }) => <svg className={c} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 18L18 6M6 6l12 12" /></svg>,
-            ChevronRight: ({ c }) => <svg className={c} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>,
-            Zap: ({ c }) => <svg className={c} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>,
-            Shield: ({ c }) => <svg className={c} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>,
-            Clock: ({ c }) => <svg className={c} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
-            CheckCircle: ({ c }) => <svg className={c} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            Zap: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>,
+            BatteryOff: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="1" y1="1" x2="23" y2="23"></line><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path><path d="M5 6.45a10.93 10.93 0 0 0-3.72 4.61"></path><path d="M8.28 15.68a11.02 11.02 0 0 0 4.16 2.06"></path><path d="M18.66 18.66A10.94 10.94 0 0 0 21 16"></path><path d="M4.61 11.28a11 11 0 0 0 1.95 4.54"></path><path d="M3.78 3.78 1 1"></path><path d="M23 23l-2.78-2.78"></path></svg>, // Abstract broken battery
+            Shield: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>,
+            Check: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg>,
+            Menu: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>,
+            MapPin: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>,
+            X: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>,
+            EyeOff: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>,
+            Phone: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>,
+            Smartphone: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>,
+            Wind: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>,
+            Layout: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>,
+            Layers: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>,
+            Cpu: ({ c }) => <svg className={c} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
         };
 
         // --- COMPONENTS ---
 
-        const Navbar = () => {
-            const [isOpen, setIsOpen] = useState(false);
+
+
+        const SolutionEcosystem = ({ lang }) => {
+            const products = [
+                { id: 1, name: "Custom Motorized", nameES: "Motorización a Medida", sub: "Convenience & Luxury", subES: "Confort y Lujo", icon: Icons.Smartphone, d: "Precision automation tailored to your exact dimensions and home style.", dES: "Automatización de precisión adaptada a sus dimensiones exactas y estilo de hogar." },
+                { id: 2, name: "Wind-Resistant & Bug Screens", nameES: "Pantallas Antiviento y Mosquiteros", sub: "High-State Protection", subES: "Protección de Alto Nivel", icon: Icons.Wind, d: "Engineered barriers designed for Florida weather without compromising your view.", dES: "Barreras de ingeniería diseñadas para el clima de Florida sin comprometer su vista." },
+                { id: 3, name: "Smart Home Integration", nameES: "Integración Inteligente", sub: "Voice & App Control", subES: "Control por Voz y App", icon: Icons.Cpu, d: "Seamlessly connects with Crestron, Lutron, and Control4 systems.", dES: "Se conecta perfectamente con sistemas Crestron, Lutron y Control4." },
+                { id: 4, name: "Luxury Shutters", nameES: "Contraventanas (Shutters)", sub: "Interior & Exterior", subES: "Interiores y Exteriores", icon: Icons.Layout, d: "Timeless architectural shutters built for durability and Florida aesthetics.", dES: "Contraventanas arquitectónicas atemporales construidas para durabilidad y estética de Florida." }
+            ];
+
+            return (
+                <section className="py-16 md:py-32 bg-zinc-950 relative overflow-hidden">
+                    {/* Background Design Element */}
+                    <div className="absolute top-0 right-0 w-1/3 h-full bg-gold-600/5 blur-[150px] pointer-events-none" />
+
+                    <div className="max-w-7xl mx-auto px-6 relative z-10">
+                        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16 md:mb-24">
+                            <div>
+                                <motion.span
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    className="text-gold-500 text-xs font-black uppercase tracking-[0.4em] mb-4 block"
+                                >
+                                    {lang === 'en' ? 'Why Choose Sun Air' : 'Por Qué Elegir Sun Air'}
+                                </motion.span>
+                                <motion.h2
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    className="font-serif text-4xl md:text-6xl text-white mb-8 leading-tight"
+                                >
+                                    {lang === 'en' ? 'Effortless Protection for Florida Living' : 'Protección Sin Esfuerzo para su estilo de vida'}
+                                </motion.h2>
+                                <motion.p
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    className="text-gray-400 text-lg font-light leading-relaxed max-w-xl"
+                                >
+                                    {lang === 'en'
+                                        ? "From concept to installation, Sun Air delivers custom roller shades and window coverings built for beauty and performance. Proudly serving Florida and shipping across the nation."
+                                        : "Desde el concepto hasta la instalación, Sun Air ofrece cortinas enrollables personalizadas diseñadas para la belleza y el rendimiento."
+                                    }
+                                </motion.p>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                {products.map((p, i) => (
+                                    <motion.div
+                                        key={p.id}
+                                        initial={{ opacity: 0, scale: 0.9 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        transition={{ delay: i * 0.1 }}
+                                        className="bg-white/5 border border-white/5 p-8 rounded-2xl hover:bg-white/10 hover:border-gold-500/30 transition-all group"
+                                    >
+                                        <p.icon c="w-8 h-8 text-gold-500 mb-6 group-hover:scale-110 transition-transform" />
+                                        <h4 className="text-white font-serif text-xl mb-2">{lang === 'en' ? p.name : p.nameES}</h4>
+                                        <p className="text-gray-500 text-xs font-light tracking-wide">{lang === 'en' ? p.sub : p.subES}</p>
+
+                                        <div className="border-t border-white/5 pt-6">
+                                            <p className="text-gray-400 text-sm leading-relaxed">{lang === 'en' ? p.d : p.dES}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
+            );
+        };
+
+        const Navbar = ({ lang, setLang }) => {
             const [scrolled, setScrolled] = useState(false);
+            const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
             useEffect(() => {
                 const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -113,185 +306,1081 @@
                 return () => window.removeEventListener('scroll', handleScroll);
             }, []);
 
-            const navLinks = [
-                { name: 'Technology', href: '#technology' },
-                { name: 'Visualizer', href: '#visualizer' },
-                { name: 'Reviews', href: '#reviews' },
-                { name: 'Contact', href: '#contact' }
-            ];
-
             return (
-                <header className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'py-4 glass-panel' : 'py-8 bg-transparent'}`}>
-                    <nav className="max-w-7xl mx-auto px-6 flex justify-between items-center text-slate-50">
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-2xl font-black tracking-[0.2em] flex items-center gap-2">
-                            <span className="text-white">SUNAIR</span>
-                            <span className="text-gold-500 font-light">SHADES</span>
-                        </motion.div>
+                <nav className={`fixed w-full z-50 transition-all duration-300 border-b ${scrolled ? 'bg-black/90 backdrop-blur border-white/10 py-4' : 'bg-transparent border-transparent py-6'}`}>
+                    <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+                        <div className="text-2xl tracking-widest text-white relative z-50">
+                            <span className="font-bold">SUNAIR</span> <span className="font-light text-white/70">SHADES</span>
+                        </div>
 
-                        {/* Desktop Links */}
-                        <div className="hidden md:flex items-center gap-10">
-                            {navLinks.map(link => (
-                                <a key={link.name} href={link.href} className="text-[10px] uppercase tracking-[0.3em] font-bold hover:text-gold-500 transition-colors">
-                                    {link.name}
+                        {/* Language Toggle */}
+                        <div className="hidden md:flex items-center ml-8 gap-2">
+                            <button onClick={() => setLang('en')} className={`text-[10px] font-bold uppercase tracking-widest ${lang === 'en' ? 'text-gold-500' : 'text-gray-600 hover:text-white'} transition-colors`}>EN</button>
+                            <span className="text-gray-700">|</span>
+                            <button onClick={() => setLang('es')} className={`text-[10px] font-bold uppercase tracking-widest ${lang === 'es' ? 'text-gold-500' : 'text-gray-600 hover:text-white'} transition-colors`}>ES</button>
+                        </div>
+
+                        {/* Desktop Menu */}
+                        <div className="hidden md:flex items-center space-x-8">
+                            {[
+                                { name: 'Features', nameES: 'Características', id: 'technology' },
+                                { name: 'About Us', nameES: 'Nosotros', id: 'mission' },
+                                { name: 'Contact', nameES: 'Contacto', id: 'contact' }
+                            ].map((item) => (
+                                <a key={item.name} href={`#${item.id}`} className="text-sm uppercase tracking-[0.2em] text-gray-400 hover:text-gold-400 transition-colors">
+                                    {lang === 'en' ? item.name : item.nameES}
                                 </a>
                             ))}
-                            <button onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })} className="bg-gold-500 text-slate-950 px-8 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all shadow-lg shadow-gold-500/10">
-                                Get Quote
+                            <button onClick={() => document.getElementById('visualizer').scrollIntoView({ behavior: 'smooth' })} className="bg-white text-black px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-gold-500 hover:text-white transition-all active:scale-95">
+                                {lang === 'en' ? 'Interactive Studio' : 'Estudio Interactivo'}
                             </button>
                         </div>
 
-                        {/* Mobile Toggle */}
-                        <button className="md:hidden p-2 text-white" onClick={() => setIsOpen(!isOpen)}>
-                            {isOpen ? <Icons.X c="w-6 h-6" /> : <Icons.Menu c="w-6 h-6" />}
-                        </button>
-                    </nav>
 
-                    {/* Mobile Menu */}
-                    <AnimatePresence>
-                        {isOpen && (
-                            <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
-                                className="md:hidden glass-panel border-t border-white/5 overflow-hidden"
-                            >
-                                <div className="flex flex-col p-8 gap-6 text-center">
-                                    {navLinks.map(link => (
-                                        <a key={link.name} href={link.href} onClick={() => setIsOpen(false)} className="text-xs uppercase tracking-[0.4em] font-bold py-2">
-                                            {link.name}
+                        {/* Mobile Toggle */}
+                        <button
+                            className="md:hidden text-white z-50 p-2 active:scale-90 transition-transform"
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+                        >
+                            {mobileMenuOpen ? <Icons.X c="w-6 h-6" /> : <Icons.Menu c="w-6 h-6" />}
+                        </button>
+
+                        {/* Mobile Menu Overlay */}
+                        <AnimatePresence>
+                            {mobileMenuOpen && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: -20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    className="absolute top-0 left-0 w-full h-screen bg-black/95 backdrop-blur-xl flex flex-col justify-center items-center gap-8 md:hidden"
+                                >
+                                    {['Features', 'About Us', 'Reviews', 'Contact'].map((item) => (
+                                        <a
+                                            key={item}
+                                            href={`#${item === 'About Us' ? 'mission' : item === 'Features' ? 'technology' : item.toLowerCase()}`}
+                                            onClick={() => setMobileMenuOpen(false)}
+                                            className="text-2xl font-serif text-white hover:text-gold-500 transition-colors"
+                                        >
+                                            {item === 'Features' ? (lang === 'en' ? 'Features' : 'Características') :
+                                                item === 'About Us' ? (lang === 'en' ? 'About Us' : 'Nosotros') :
+                                                    item === 'Reviews' ? (lang === 'en' ? 'Reviews' : 'Reseñas') :
+                                                        (lang === 'en' ? 'Contact' : 'Contacto')}
                                         </a>
                                     ))}
-                                    <button onClick={() => { setIsOpen(false); document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); }} className="bg-gold-500 text-black py-4 text-xs font-black uppercase tracking-widest mt-4">
-                                        Free Audit
+                                    <button className="mt-8 bg-gold-500 text-black px-8 py-3 text-sm font-bold uppercase tracking-widest active:scale-95 transition-transform" onClick={() => { setMobileMenuOpen(false); document.getElementById('visualizer').scrollIntoView({ behavior: 'smooth' }); }}>
+                                        {lang === 'en' ? 'Interactive Studio' : 'Estudio Interactivo'}
                                     </button>
-                                </div>
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
-                </header>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                </nav >
             );
         };
 
-        const Hero = () => {
+        const Hero = ({ lang }) => {
             return (
                 <section className="relative h-screen flex items-center justify-center overflow-hidden">
-                    {/* Background Video/Image */}
-                    <div className="absolute inset-0 z-0 bg-slate-900">
-                        <video
-                            playsInline muted loop autoPlay
-                            className="w-full h-full object-cover opacity-60"
-                            poster="hero_user.jpg"
-                        >
-                            <source src="https://player.vimeo.com/external/494163965.hd.mp4?s=ee3297053cafa4457f53a473117565409a893717&profile_id=175" type="video/mp4" />
-                        </video>
-                        <div className="absolute inset-0 hero-video-overlay" />
+                    {/* Background: Static Image (Failsafe) */}
+                    <div className="absolute inset-0 z-0">
+                        <div className="absolute inset-0 bg-black/50 z-10" />
+                        <motion.img
+                            src="./hero_user.jpg"
+                            alt="Luxury Lanai with Smart Motorized Shades"
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                                // Fallback
+                                e.target.src = "https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=1280";
+                            }}
+                        />
                     </div>
 
-                    <div className="relative z-10 text-center max-w-5xl px-6">
+                    <div className="relative z-20 text-center max-w-5xl px-4">
                         <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                            className="space-y-8"
+                            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+                            animate={{ opacity: 1, backdropFilter: "blur(8px)" }}
+                            transition={{ duration: 1.5 }}
+                            className="bg-black/20 p-6 sm:p-12 md:p-20 rounded-2xl border border-white/10 shadow-[0_0_100px_rgba(0,0,0,0.5)] relative overflow-hidden group"
                         >
-                            <div className="inline-block py-2 px-6 border border-gold-500/30 rounded-full bg-gold-500/5 backdrop-blur-sm">
-                                <span className="text-[10px] uppercase font-black tracking-[0.5em] text-gold-500">Florida's Ultimate Coastal Shield</span>
-                            </div>
+                            {/* Inner Shine Effect */}
 
-                            <h1 className="font-serif text-5xl md:text-8xl lg:text-9xl text-white leading-tight">
-                                Hurricane Armor.<br />
-                                <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600">Mansion Aesthetics.</span>
-                            </h1>
 
-                            <p className="text-lg md:text-2xl text-slate-300 font-light max-w-3xl mx-auto leading-relaxed">
-                                Elite motorized shading systems engineered for Florida's high-speed wind zones.
-                                <span className="text-white font-medium"> 24V constant power. Zero battery failure.</span>
-                            </p>
+                            <motion.h1
+                                initial={{ opacity: 0, y: 50 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1, delay: 0.2 }}
+                                className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-[1.05] tracking-tight relative z-10"
+                            >
+                                {lang === 'en' ? 'High-Quality Design.' : 'Diseño de Alta Calidad.'}<br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 italic">
+                                    {lang === 'en' ? 'Florida Wind Protection.' : 'Protección para el Viento de Florida.'}
+                                </span>
+                            </motion.h1>
 
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-                                <button onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })} className="bg-white text-black px-12 py-5 text-xs font-black uppercase tracking-[0.3em] hover:bg-gold-500 hover:text-white transition-all transform hover:-translate-y-1">
-                                    The 10-Day Install →
+                            <motion.p
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 1, delay: 0.8 }}
+                                className="text-gray-300 text-base md:text-xl font-light tracking-wide max-w-2xl mx-auto mb-12 relative z-10"
+                            >
+                                {lang === 'en'
+                                    ? 'The home of the Quickest Turnaround in Florida. Built in our local Clearwater workshop for your luxury home.'
+                                    : 'La entrega más rápida de Florida. Fabricado en nuestro taller de Clearwater para su hogar de lujo.'}
+                            </motion.p>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 1 }}
+                                className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center relative z-10"
+                            >
+                                <button
+                                    onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+                                    className="group relative bg-gold-500 text-black px-8 sm:px-10 py-4 sm:py-5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] shadow-xl overflow-hidden active:scale-95 transition-all w-full sm:w-auto"
+                                >
+                                    <span className="relative z-10">{lang === 'en' ? 'Get a Quote' : 'Cotizar Ahora'}</span>
+                                    <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                                    <span className="absolute inset-0 z-20 flex items-center justify-center text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                        {lang === 'en' ? 'Get a Quote' : 'Cotizar Ahora'}
+                                    </span>
                                 </button>
-                                <button onClick={() => document.getElementById('visualizer').scrollIntoView({ behavior: 'smooth' })} className="border border-white/20 text-white px-12 py-5 text-xs font-black uppercase tracking-[0.3em] hover:border-gold-500 backdrop-blur-md transition-all">
-                                    Interactive Studio
+                                <button
+                                    onClick={() => document.getElementById('visualizer').scrollIntoView({ behavior: 'smooth' })}
+                                    className="group border border-white/30 text-white px-8 sm:px-10 py-4 sm:py-5 text-[10px] sm:text-xs font-bold uppercase tracking-[0.25em] hover:border-gold-500 hover:text-gold-500 backdrop-blur-sm transition-all active:scale-95 w-full sm:w-auto"
+                                >
+                                    {lang === 'en' ? 'Interactive Studio' : 'Estudio Interactivo'}
                                 </button>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     </div>
-
-                    {/* Scroll Indicator */}
-                    <motion.div
-                        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2, duration: 1 }}
-                        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-40 hover:opacity-100 transition-opacity"
-                    >
-                        <span className="text-[10px] uppercase tracking-[0.5em] font-bold">Discover More</span>
-                        <div className="w-[1px] h-16 bg-gradient-to-b from-gold-500 to-transparent" />
-                    </motion.div>
                 </section>
             );
         };
 
-        const Comparison = () => {
-            const items = [
+        const TechnologyShowcase = ({ lang }) => {
+            return (
+                <section id="technology" className="relative bg-obsidian overflow-hidden">
+                    <div className="grid grid-cols-1 md:grid-cols-2 min-h-[700px]">
+
+                        {/* THE PROBLEM: Lithium Trap */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="relative flex flex-col justify-center p-8 sm:p-12 md:p-24 bg-zinc-950 group overflow-hidden"
+                        >
+                            {/* Texture: Broken Circuitry Grid */}
+                            <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-1000"
+                                style={{
+                                    backgroundImage: `linear-gradient(rgba(239, 68, 68, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 68, 68, 0.1) 1px, transparent 1px)`,
+                                    backgroundSize: '40px 40px',
+                                    maskImage: 'radial-gradient(circle at center, black, transparent)'
+                                }}
+                            />
+
+                            <div className="relative z-10">
+                                <motion.div
+                                    initial={{ scale: 0.8, opacity: 0 }}
+                                    whileInView={{ scale: 1, opacity: 1 }}
+                                    transition={{ duration: 0.8 }}
+                                    className="mb-12 inline-block"
+                                >
+                                    <div className="relative">
+                                        <Icons.BatteryOff c="w-16 h-16 text-red-500/40" />
+                                        <motion.div
+                                            animate={{ opacity: [0.2, 0.5, 0.2] }}
+                                            transition={{ repeat: Infinity, duration: 2 }}
+                                            className="absolute inset-0 blur-xl bg-red-500/20"
+                                        />
+                                    </div>
+                                </motion.div>
+
+                                <h2 className="font-serif text-4xl text-gray-500 mb-6 tracking-tight">
+                                    {lang === 'en' ? 'The Lithium Trap' : 'La Trampa del Litio'}
+                                </h2>
+
+                                <p className="text-gray-600 text-lg font-light leading-relaxed max-w-md mb-8">
+                                    {lang === 'en'
+                                        ? "Standard motorized shades rely on volatile lithium batteries hidden in window pockets where temperatures often exceed 130°F."
+                                        : "Las cortinas motorizadas estándar dependen de baterías de litio volátiles ocultas en espacios donde el calor supera los 130°F."
+                                    }
+                                </p>
+
+                                <div className="space-y-4 text-xs uppercase tracking-[0.2em] text-red-900/60 font-bold">
+                                    <div className="flex items-center gap-3"><div className="w-1 h-1 bg-red-500 rounded-full" /> {lang === 'en' ? 'Premature Cell Degradation' : 'Degradación Celular Prematura'}</div>
+                                    <div className="flex items-center gap-3"><div className="w-1 h-1 bg-red-500 rounded-full" /> {lang === 'en' ? 'Internal Acid Leakage Risk' : 'Riesgo de Fuga de Ácido'}</div>
+                                    <div className="flex items-center gap-3"><div className="w-1 h-1 bg-red-500 rounded-full" /> {lang === 'en' ? 'Ladder-Only Maintenance' : 'Mantenimiento con Escalera'}</div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* THE SOLUTION: Constant Power Infrastructure */}
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="relative flex flex-col justify-center p-8 sm:p-12 md:p-24 bg-black group overflow-hidden border-t md:border-t-0 md:border-l border-white/5"
+                        >
+                            {/* Texture: Architectural Schematic Blueprint */}
+                            <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-1000"
+                                style={{
+                                    backgroundImage: `radial-gradient(circle at 2px 2px, rgba(212, 175, 55, 0.15) 1px, transparent 0)`,
+                                    backgroundSize: '24px 24px'
+                                }}
+                            />
+
+                            {/* Floating Blueprint Lines */}
+                            <div className="absolute inset-0 opacity-5 pointer-events-none">
+                                <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <line x1="0" y1="20" x2="100" y2="20" stroke="white" strokeWidth="0.1" />
+                                    <line x1="0" y1="80" x2="100" y2="80" stroke="white" strokeWidth="0.1" />
+                                    <line x1="20" y1="0" x2="20" y2="100" stroke="white" strokeWidth="0.1" />
+                                    <line x1="80" y1="0" x2="80" y2="100" stroke="white" strokeWidth="0.1" />
+                                </svg>
+                            </div>
+
+                            <div className="relative z-10">
+                                <motion.div
+                                    initial={{ y: 20, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    transition={{ duration: 0.8, delay: 0.2 }}
+                                    className="mb-12 inline-block"
+                                >
+                                    <div className="relative">
+                                        <Icons.Zap c="w-16 h-16 text-gold-500" />
+                                        <motion.div
+                                            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+                                            transition={{ repeat: Infinity, duration: 3 }}
+                                            className="absolute inset-0 blur-2xl bg-gold-500/30"
+                                        />
+                                    </div>
+                                </motion.div>
+
+                                <h2 className="font-serif text-4xl text-white mb-6 tracking-tight">
+                                    {lang === 'en' ? 'Constant Power' : 'Energía Constante'}
+                                </h2>
+
+                                <p className="text-gray-400 text-lg font-light leading-relaxed max-w-md mb-8">
+                                    {lang === 'en'
+                                        ? "Our low-voltage architectural power system eliminates battery failure forever. Constant power ensures high performance at low electricity cost in Florida's most extreme conditions."
+                                        : "Nuestro sistema de energía de bajo voltaje elimina el fallo de las baterías para siempre. Alto rendimiento y bajo costo eléctrico para un funcionamiento perfecto bajo el calor extremo."
+                                    }
+                                </p>
+
+                                <div className="space-y-4 text-xs uppercase tracking-[0.2em] text-gold-500 font-bold">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-1.5 h-1.5 bg-gold-500 rotate-45" />
+                                        {lang === 'en' ? 'Zero Maintenance Lifetime' : 'Vida Útil Sin Mantenimiento'}
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-1.5 h-1.5 bg-gold-500 rotate-45" />
+                                        {lang === 'en' ? 'Operating Threshold > 140°F' : 'Umbral de Operación > 140°F'}
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-1.5 h-1.5 bg-gold-500 rotate-45" />
+                                        {lang === 'en' ? 'Silent High-Torque Motors' : 'Motores Silenciosos de Alto Torque'}
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    {/* Industrial Label Overlay */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center z-30">
+                        <div className="bg-gold-500 text-black px-4 py-1.5 text-[10px] uppercase font-black tracking-[0.4em]">
+                            {lang === 'en' ? 'Quality Standards' : 'Estándares de Calidad'}
+                        </div>
+                        <div className="bg-black/80 backdrop-blur text-gold-500/80 px-3 py-1 text-[8px] uppercase font-bold tracking-[0.2em] border-x border-b border-gold-500/20">
+                            Smart Shade Solutions
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+
+
+
+        const Visualizer = ({ lang }) => {
+            const [shadeColor, setShadeColor] = useState({ name: 'White / White', hex: '#FFFFFF', opacity: 0.95 });
+            const [shadeHeight, setShadeHeight] = useState(60);
+            const [openness, setOpenness] = useState(5); // 1, 3, 5, 10
+
+
+            const fabrics = [
+                // 001: Standard White (Simple)
+                { id: '001', name: '001 White/White', hex: '#FFFFFF', opacity: 0.95, cat: 'Basic', type: 'solid' },
+
+                // 003: White/Grey (Distinct Mesh Grid)
+                { id: '003', name: '003 White/Grey', hex: '#E5E7EB', opacity: 0.90, cat: 'Basic', type: 'mesh-crisp', p1: 'rgba(0,0,0,0.15)', p2: 'transparent' },
+
+                // 016: White/Linen (Subtle Cross-hatch)
+                { id: '016', name: '016 White/Linen', hex: '#F3F0E6', opacity: 0.92, cat: 'Basic', type: 'linen', p1: 'rgba(210, 190, 160, 0.2)', p2: 'rgba(255,255,255,0.4)' },
+
+                // 404: Bone/Bone (Yellowish Beige Grid)
+                { id: '404', name: '404 Bone/Bone', hex: '#E8DEC7', opacity: 0.92, cat: 'Basic', type: 'grid-warm', p1: 'rgba(180, 160, 130, 0.15)', p2: 'rgba(255,255,255,0.3)' },
+
+                // 203: Beige/Grey (Diagonal/Diamond Weave) - "Salt & Pepper"
+                { id: '203', name: '203 Beige/Grey', hex: '#C8C0B0', opacity: 0.90, cat: 'Basic', type: 'diagonal-weave', p1: 'rgba(80, 80, 80, 0.15)', p2: 'rgba(255,255,255,0.3)' },
+
+                // 303: Grey/Grey (Standard Mesh)
+                { id: '303', name: '303 Grey/Grey', hex: '#A8A8A8', opacity: 0.90, cat: 'Basic', type: 'mesh-standard', p1: 'rgba(0,0,0,0.2)', p2: 'rgba(255,255,255,0.1)' },
+
+                // 1241: Charcoal/Bronze (Dark Brown Weave)
+                { id: '1241', name: '1241 Charcoal/Bronze', hex: '#5A5248', opacity: 0.90, cat: 'Basic', type: 'mesh-standard', p1: 'rgba(0,0,0,0.4)', p2: 'rgba(100, 60, 20, 0.2)' },
+
+                // 903: Black/Grey (Dark Speckle)
+                { id: '903', name: '903 Black/Grey', hex: '#444444', opacity: 0.88, cat: 'Basic', type: 'mesh-dense', p1: 'rgba(0,0,0,0.5)', p2: 'rgba(200,200,200,0.1)' },
+
+                // 906: Black/Dark Grey (Almost Black)
+                { id: '906', name: '906 Black/Dark Grey', hex: '#2A2A2A', opacity: 0.85, cat: 'Basic', type: 'mesh-dense', p1: 'rgba(0,0,0,0.6)', p2: 'rgba(80,80,80,0.2)' },
+
+                // 914: Black/Black (Solid)
+                { id: '914', name: '914 Black/Black', hex: '#111111', opacity: 0.85, cat: 'Basic', type: 'solid' },
+
+                // Napa Collection (High Fidelity "Grass Cloth" Simulation)
+                // Colors extracted exactly from User Reference Images (Beige, Olive, Multi, Char Brown)
                 {
-                    title: "The Lithium Trap",
-                    subtitle: "Standard Retail Units",
-                    points: ["Failed cells at >110°F", "Complex ladder batteries", "Fragile imported parts"],
-                    type: "bad",
-                    icon: Icons.X
+                    id: 'N1', name: 'Napa Beige', hex: '#C8BFAA', opacity: 0.99, cat: 'Napa', type: 'woven-slub',
+                    p1: '#E6E0D1', // Light Straw (Highlights)
+                    p2: '#A89F88', // Darker Tan (Shadows)
+                    p3: '#EFECE1'  // Vertical Stitching (Cream)
                 },
                 {
-                    title: "24V Constant Power",
-                    subtitle: "Sun Air Engineering",
-                    points: ["Operating range up to 145°F", "Discrete hardwired power", "Clearwater local production"],
-                    type: "good",
+                    id: 'N2', name: 'Napa Multi', hex: '#9E8568', opacity: 0.99, cat: 'Napa', type: 'woven-slub',
+                    p1: '#Cfb596', // Light Tan
+                    p2: '#684E3A', // Dark Reddish Brown
+                    p3: '#E0D0BB'  // Vertical Stitch
+                },
+                {
+                    id: 'N3', name: 'Napa Olive', hex: '#8C8E7E', opacity: 0.99, cat: 'Napa', type: 'woven-slub',
+                    p1: '#A8AA96', // Light Sage
+                    p2: '#656758', // Dark Olive
+                    p3: '#C6C8B9'  // Vertical Stitch
+                },
+                {
+                    id: 'N4', name: 'Napa Char Brown', hex: '#4E453E', opacity: 0.99, cat: 'Napa', type: 'woven-slub',
+                    p1: '#6B5E55', // Lighter Brown
+                    p2: '#2F2722', // Deep Espresso
+                    p3: '#8E7F75'  // Vertical Stitch (Taupe)
+                },
+            ];
+
+            const [activeTab, setActiveTab] = useState('Basic');
+            const filteredFabrics = fabrics.filter(f => f.cat === activeTab);
+
+            // Senior Shader: Procedural Pattern Generator
+            const getFabricStyle = (f) => {
+                const style = { backgroundColor: f.hex };
+
+                if (f.type === 'solid') {
+                    return style;
+                }
+
+                if (f.type === 'mesh-crisp') {
+                    // 003: Crisp grid
+                    style.backgroundImage = `
+                        linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)
+                    `;
+                    style.backgroundSize = '4px 4px';
+                }
+                else if (f.type === 'linen') {
+                    // 016: Subtle cross-hatch
+                    style.backgroundImage = `
+                        repeating-linear-gradient(0deg, ${f.p1} 0px, transparent 1px, transparent 4px),
+                        repeating-linear-gradient(90deg, ${f.p1} 0px, transparent 1px, transparent 3px)
+                    `;
+                }
+                else if (f.type === 'grid-warm') {
+                    // 404: Warmer grid
+                    style.backgroundImage = `
+                        linear-gradient(${f.p1} 1px, transparent 1px),
+                        linear-gradient(90deg, ${f.p1} 1px, transparent 1px)
+                    `;
+                    style.backgroundSize = '6px 6px';
+                }
+                else if (f.type === 'diagonal-weave') {
+                    // 203: The Complex Diamond/Diagonal
+                    style.backgroundImage = `
+                        repeating-linear-gradient(45deg, ${f.p1} 0px, ${f.p1} 1px, transparent 1px, transparent 5px),
+                        repeating-linear-gradient(-45deg, ${f.p1} 0px, ${f.p1} 1px, transparent 1px, transparent 5px)
+                    `;
+                }
+                else if (f.type === 'mesh-standard') {
+                    // 303, 1241: Standard Screen
+                    style.backgroundImage = `
+                        radial-gradient(${f.p1} 1px, transparent 1px)
+                    `;
+                    style.backgroundSize = '3px 3px';
+                }
+                else if (f.type === 'mesh-dense') {
+                    // 903, 906
+                    style.backgroundImage = `
+                        radial-gradient(${f.p2} 1px, transparent 0)
+                    `;
+                    style.backgroundSize = '2px 2px'; // Tighter
+                }
+                else if (f.type === 'woven-slub') {
+                    // NAPA COLLECTION: High Fidelity Grass Cloth Simulation
+                    // Complex Triple-Layer Shader
+                    style.backgroundImage = `
+                        /* Layer 3: Vertical Binding Stitch (Thin, Precise) */
+                        repeating-linear-gradient(90deg,
+                            transparent 0px,
+                            transparent 3px,
+                            ${f.p3}44 3px,
+                            ${f.p3}44 4px
+                        ),
+                        /* Layer 2: Organic Horizontal Weft (Thick, Random-looking) */
+                        repeating-linear-gradient(0deg,
+                            ${f.p2} 0px,
+                            ${f.p2} 1px,
+                            ${f.hex} 1px,
+                            ${f.hex} 3px,
+                            ${f.p1} 3px,
+                            ${f.p1} 5px,
+                            ${f.hex} 5px,
+                            ${f.hex} 8px
+                        ),
+                        /* Layer 1: Noise Texture for organic feel */
+                        url(#fabricNoiseSubtle)
+                    `;
+                    style.backgroundSize = '100% 100%, 100% 100%, 100% 100%';
+                    // NOTE: We do NOT set backgroundSize to tight tiles for the gradient to allow the 'random' feeling bars to stretch
+                }
+
+                else if (f.type === 'woven-natural') {
+                    // (Legacy Fallback)
+                    style.backgroundImage = `
+                        repeating-linear-gradient(0deg, ${f.p2}22 0px, ${f.p2}22 1px, transparent 1px, transparent 4px),
+                        repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 10px)
+                    `;
+                    style.backgroundSize = '100% 4px, 10px 100%';
+                }
+
+                return style;
+            };
+
+            // --- SENIOR REF: CONTROL EXTRACTION FOR SANDWICH LAYOUT ---
+            const TransparencyMatrix = (
+                <div className="bg-black/40 p-6 lg:p-10 rounded-3xl border border-white/5 backdrop-blur-sm">
+                    <h3 className="text-[10px] uppercase tracking-[0.3em] text-gold-500 font-black border-b border-gold-500/20 pb-4 mb-8">Precision Configuration</h3>
+                    <div>
+                        <span className="text-xs uppercase text-gray-500 tracking-widest font-bold block mb-4">
+                            {['001', '003', '016', '404', '203'].some(c => shadeColor.name.startsWith(c)) || shadeColor.cat === 'Napa' ?
+                                (lang === 'en' ? 'Light Screen Openness' : 'Apertura de Pantalla Clara') :
+                                (lang === 'en' ? 'Dark Screen Openness' : 'Apertura de Pantalla Oscura')}
+                        </span>
+                        <div className="grid grid-cols-4 gap-2">
+                            {[1, 3, 5, 10].map((val) => (
+                                <button
+                                    key={val}
+                                    disabled={shadeColor.cat === 'Napa'}
+                                    onClick={() => setOpenness(val)}
+                                    className={`py-3 lg:py-2 text-xs font-bold border transition-all 
+                                            ${shadeColor.cat === 'Napa'
+                                            ? 'opacity-20 cursor-not-allowed border-white/5 text-gray-700'
+                                            : openness === val
+                                                ? 'bg-white text-black border-white'
+                                                : 'bg-transparent text-gray-500 border-white/10 hover:border-white/40'
+                                        }`}
+                                >
+                                    {val}%
+                                </button>
+                            ))}
+                        </div>
+                        <div className="mt-3 flex justify-between items-center border-t border-white/10 pt-2">
+                            <div className="text-center">
+                                <span className="block text-[9px] text-gray-500 uppercase tracking-widest">{lang === 'en' ? 'UV Block' : 'Bloqueo UV'}</span>
+                                <span className="block text-xs text-gold-500 font-bold font-mono">
+                                    {shadeColor.cat === 'Napa' ? '100%' : (openness === 1 ? '99%' : openness === 3 ? '97%' : openness === 5 ? '95%' : '90%')}
+                                </span>
+                            </div>
+                            <div className="h-4 w-[1px] bg-white/10" />
+                            <div className="text-center">
+                                <span className="block text-[9px] text-gray-500 uppercase tracking-widest">{lang === 'en' ? 'SHGC' : 'Factor Solar'}</span>
+                                <span className="block text-xs text-white font-bold font-mono">
+                                    {shadeColor.cat === 'Napa' ? '0.10' : (openness === 1 ? '0.15' : openness === 3 ? '0.20' : openness === 5 ? '0.25' : '0.35')}
+                                </span>
+                            </div>
+                            <div className="h-4 w-[1px] bg-white/10" />
+                            <div className="text-center">
+                                <span className="block text-[9px] text-gray-500 uppercase tracking-widest">{lang === 'en' ? 'Privacy' : 'Privacidad'}</span>
+                                <span className="block text-xs text-white font-bold">
+                                    {shadeColor.cat === 'Napa'
+                                        ? (lang === 'en' ? 'Total' : 'Total')
+                                        : (openness === 1
+                                            ? (lang === 'en' ? 'High' : 'Alta')
+                                            : openness === 3
+                                                ? (lang === 'en' ? 'Med' : 'Media')
+                                                : openness === 5
+                                                    ? (lang === 'en' ? 'Std' : 'Estándar')
+                                                    : (lang === 'en' ? 'Low' : 'Baja'))}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+
+            const HeightControl = (
+                <div className="bg-black/40 p-6 lg:p-10 rounded-3xl border border-white/5 backdrop-blur-sm mt-8">
+                    <div className="flex justify-between mb-4">
+                        <span className="text-xs uppercase text-gray-500 tracking-widest font-bold">Coverage Control</span>
+                        <span className="text-xs text-white font-mono">{100 - shadeHeight}%</span>
+                    </div>
+                    <input
+                        type="range"
+                        value={shadeHeight}
+                        onChange={(e) => setShadeHeight(e.target.value)}
+                        className="w-full accent-gold-500 bg-white/10 h-1.5 rounded-full appearance-none cursor-pointer"
+                    />
+                </div>
+            );
+
+            const CollectionTabs = (
+                <div className="flex gap-6 border-b border-white/10 pb-2 mb-8 justify-center lg:justify-start">
+                    {['Basic', 'Napa'].map((tab) => (
+                        <button
+                            key={tab}
+                            onClick={() => {
+                                setActiveTab(tab);
+                                const firstOfCat = fabrics.find(f => f.cat === tab);
+                                if (firstOfCat) setShadeColor(firstOfCat);
+                            }}
+                            className={`text-xs uppercase tracking-widest py-3 lg:py-2 relative transition-colors ${activeTab === tab ? 'text-gold-500' : 'text-gray-500 hover:text-white'}`}
+                        >
+                            {tab === 'Basic' ? 'Exclusive' : tab}
+                            {activeTab === tab && <motion.div layoutId="tab-underline" className="absolute bottom-[-1px] left-0 w-full h-[1px] bg-gold-500" />}
+                        </button>
+                    ))}
+                </div>
+            );
+
+            const ColorGrid = (
+                <div className="bg-black/40 p-6 lg:p-10 rounded-3xl border border-white/5 backdrop-blur-sm mt-8">
+                    {CollectionTabs}
+                    <div className="grid grid-cols-4 gap-4 text-center">
+                        {filteredFabrics.map((f) => (
+                            <button
+                                key={f.name}
+                                onClick={() => setShadeColor(f)}
+                                className={`flex flex-col items-center p-3 lg:p-2 rounded-2xl transition-all group active:scale-95 ${shadeColor.name === f.name ? 'bg-white/10 ring-1 ring-gold-500' : 'hover:bg-white/5'}`}
+                            >
+                                <div
+                                    className="w-10 h-10 rounded-full border border-white/20 shadow-sm overflow-hidden"
+                                    style={getFabricStyle(f)}
+                                />
+                            </button>
+                        ))}
+                    </div>
+                    <div className="pt-4 text-center">
+                        <p className="text-white font-serif text-lg leading-tight mb-1">{shadeColor.name.split(' ').slice(1).join(' ') || shadeColor.name}</p>
+                        <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">{shadeColor.name.split(' ')[0]}</p>
+                        <p className="text-[10px] text-gold-500/60 uppercase tracking-widest font-black mt-2">
+                            {shadeColor.cat === 'Basic' ? 'Stylish Colors Built to Last' : `${shadeColor.cat} Collection`}
+                        </p>
+                    </div>
+                </div>
+            );
+
+            const VisualizerPreview = (
+                <div className="w-full xl:col-span-8 flex flex-col items-center">
+                    <div className="relative w-full max-w-[600px] aspect-square overflow-hidden rounded-[3rem] shadow-[0_60px_100px_-30px_rgba(0,0,0,0.7)] group border border-white/10">
+                        {/* Global Noise Filter definition */}
+                        <svg className="absolute w-0 h-0 pointer-events-none">
+                            <filter id="fabricNoise">
+                                <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="noise" />
+                                <feColorMatrix in="noise" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.5 0" />
+                                <feComponentTransfer>
+                                    <feFuncA type="linear" slope="0.05" />
+                                </feComponentTransfer>
+                                <feBlend in="SourceGraphic" mode="overlay" />
+                            </filter>
+                            <filter id="fabricNoiseSubtle">
+                                {/* Ultra-Clean Micro-Texture */}
+                                <feTurbulence type="fractalNoise" baseFrequency="2.0" numOctaves="2" result="noise" />
+                                <feComponentTransfer>
+                                    <feFuncA type="linear" slope="0.03" />
+                                </feComponentTransfer>
+                                <feBlend in="SourceGraphic" mode="overlay" />
+                            </filter>
+                        </svg>
+
+                        {/* Monolithic Backdrop */}
+                        <div className="absolute inset-x-0 inset-y-0 bg-zinc-950 flex items-center justify-center">
+                            <img
+                                src="visualizer_sunset.png?v=2"
+                                loading="lazy"
+                                className="absolute inset-0 w-full h-full object-cover"
+                                alt="Visualizer Wallpaper"
+                                onError={(e) => {
+                                    e.target.src = 'hero_user.jpg';
+                                }}
+                            />
+                            <div className="absolute inset-0 bg-black/10 mix-blend-multiply" />
+                        </div>
+
+                        <motion.div
+                            className="absolute inset-x-0 top-0 z-30 pointer-events-none"
+                            initial={false}
+                            animate={{ height: `${shadeHeight}%` }}
+                            transition={{ type: "spring", stiffness: 45, damping: 25, mass: 1.2 }}
+                        >
+                            {/* Side Guide Cables (Automatic Fidelity) */}
+                            <div className="absolute left-1 top-[-1000px] bottom-0 w-[1px] bg-gradient-to-b from-white/20 via-white/40 to-white/10 shadow-[0_0_10px_rgba(255,255,255,0.2)]" />
+                            <div className="absolute right-1 top-[-1000px] bottom-0 w-[1px] bg-gradient-to-b from-white/20 via-white/40 to-white/10 shadow-[0_0_10px_rgba(255,255,255,0.2)]" />
+
+                            <motion.div
+                                className="relative w-full h-full overflow-hidden"
+                                animate={{ height: '100%' }}
+                                transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
+                            >
+                                {/* Layer 1: The Filtered Fabric (Isolated) */}
+                                <div
+                                    className="absolute inset-0 transition-all duration-700"
+                                    style={{
+                                        ...getFabricStyle(shadeColor),
+                                        // Senior Physics: Calculated Openness Logic
+                                        filter: shadeColor.name.startsWith('001') ? 'url(#fabricNoiseSubtle)' : 'url(#fabricNoise)',
+                                        // Senior Physics: Calculated Openness Logic
+                                        opacity: shadeColor.cat === 'Napa' ? 0.98 : (1 - (openness / 100 * 0.8)),
+                                        backdropFilter: shadeColor.cat === 'Napa' ? 'none' : `blur(${12 - openness}px)`
+                                    }}
+                                />
+
+                                {/* Layer 2: Dimensional Shadows (Volumetric Lighting) */}
+                                <div className="absolute inset-0 shadow-[inset_0_10px_30px_-5px_rgba(255,255,255,0.1)]" />
+                                {/* Pure White Exception: Remove darkening gradient for 001 */}
+                                {!shadeColor.name.startsWith('001') && (
+                                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/20 mix-blend-overlay pointer-events-none" />
+                                )}
+
+                                {/* Layer 4: Hem Bar (Strict Isolation) */}
+                                <div className="absolute bottom-0 w-full h-[8px] bg-zinc-950 border-t border-white/10 flex flex-col justify-center">
+                                    <div className="w-full h-[1px] bg-white/5" />
+                                </div>
+                            </motion.div>
+                        </motion.div>
+                    </div>
+                </div>
+            );
+
+            return (
+                <section id="visualizer" className="h-[100dvh] lg:h-auto py-4 lg:py-32 bg-zinc-900 relative overflow-hidden flex flex-col justify-center">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full h-full flex flex-col">
+                        <div className="text-center mb-2 lg:mb-16 shrink-0 mt-12 lg:mt-0">
+                            <motion.h2
+                                initial={{ opacity: 0, y: -20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                className="font-serif text-2xl lg:text-5xl mb-1 lg:mb-4 text-white"
+                            >
+                                {lang === 'en' ? 'Pure View Visualizer' : 'Visualizador Pure View'}
+                            </motion.h2>
+                            <p className="hidden md:block text-gray-400 font-light max-w-2xl mx-auto text-sm lg:text-base">
+                                {lang === 'en'
+                                    ? <span>Experience the <span className="text-gold-500 font-medium italic">Full Splendor</span> of our materials. Custom-tailored designs visualized in an ultra-luxury sunset sanctuary.</span>
+                                    : <span>Experimente el <span className="text-gold-500 font-medium italic">Esplendor Completo</span> de nuestros materiales. Diseños a medida visualizados en un santuario de lujo al atardecer.</span>
+                                }
+                            </p>
+                        </div>
+
+                        {/* DESKTOP LAYOUT (Unchanged - Sidebar Left, Preview Right) */}
+                        <div className="hidden xl:grid xl:grid-cols-12 gap-12 items-center">
+                            <div className="xl:col-span-4 space-y-0">
+                                {TransparencyMatrix}
+                                {HeightControl}
+                                {ColorGrid}
+                            </div>
+                            {VisualizerPreview}
+                        </div>
+
+                        {/* MOBILE LAYOUT (Control Frame: Image surrounded by interactive dials) */}
+                        <div className="flex flex-col gap-2 xl:hidden select-none flex-1 min-h-0 justify-center">
+
+                            {/* 1. TOP: Collection Selection (Compact Pille) */}
+                            <div className="flex justify-center bg-black/40 p-1 rounded-full border border-white/5 mx-auto w-full max-w-[240px] shrink-0">
+                                {['Basic', 'Napa'].map((tab) => (
+                                    <button
+                                        key={tab}
+                                        onClick={() => {
+                                            setActiveTab(tab);
+                                            const firstOfCat = fabrics.find(f => f.cat === tab);
+                                            if (firstOfCat) setShadeColor(firstOfCat);
+                                        }}
+                                        className={`flex-1 text-[9px] uppercase tracking-widest px-2 py-1.5 rounded-full transition-all duration-300 ${activeTab === tab ? 'bg-gold-500 text-black font-black' : 'text-gray-500 hover:text-white'}`}
+                                    >
+                                        {tab === 'Basic' ? 'EXCLUSIVE' : tab}
+                                    </button>
+                                ))}
+                            </div>
+
+                            {/* 2. CENTER: THE CONTROL FRAME (Fixed Multi-Axis) */}
+                            <div className="flex items-center gap-2 flex-1 min-h-0 overflow-hidden">
+
+                                {/* LEFT FLANK: Vertical Height/Coverage Dial */}
+                                <div className="flex flex-col items-center gap-2 h-full py-4 bg-black/40 rounded-2xl border border-white/5 w-10 sm:w-14 shadow-2xl backdrop-blur-md relative shrink-0">
+                                    <div className="text-[7px] md:text-[8px] uppercase tracking-widest text-gold-500 font-black [writing-mode:vertical-lr] rotate-180 absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 opacity-40 leading-none">
+                                        {lang === 'en' ? 'SHD LFT' : 'ALTURA'}
+                                    </div>
+                                    <div className="flex-1 relative w-full flex justify-center py-2 overflow-hidden">
+                                        <input
+                                            type="range"
+                                            value={shadeHeight}
+                                            onChange={(e) => setShadeHeight(e.target.value)}
+                                            style={{
+                                                appearance: 'none',
+                                                WebkitAppearance: 'none',
+                                                width: '180px',
+                                                height: '4px',
+                                                background: 'rgba(255,255,255,0.1)',
+                                                borderRadius: '2px',
+                                                transform: 'rotate(-90deg)',
+                                                position: 'absolute',
+                                                top: '50%',
+                                                left: '50%',
+                                                marginLeft: '-90px',
+                                                marginTop: '-2px'
+                                            }}
+                                            className="vertical-range-slider accent-gold-500"
+                                        />
+                                        <style dangerouslySetInnerHTML={{
+                                            __html: `
+                                            .vertical-range-slider::-webkit-slider-thumb {
+                                                -webkit-appearance: none;
+                                                width: 18px;
+                                                height: 18px;
+                                                background: #eab308;
+                                                border-radius: 50%;
+                                                cursor: pointer;
+                                                box-shadow: 0 0 10px rgba(234, 179, 8, 0.6);
+                                                border: 2px solid white;
+                                            }
+                                        `}} />
+                                    </div>
+                                    <div className="text-[8px] sm:text-[10px] text-white font-mono bg-black px-1 sm:px-2 py-1 rounded border border-white/10 z-10 sm:mb-2">
+                                        {shadeHeight}%
+                                    </div>
+                                </div>
+
+                                {/* CENTER PIECE: THE IMAGE (Responsive Square) */}
+                                <div className="flex-1 h-full max-h-[60vh] rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative group bg-zinc-950">
+                                    {/* Procedural Backdrop */}
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <img
+                                            src="visualizer_sunset.png?v=2"
+                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                                            alt="Visualizer Wallpaper"
+                                            onError={(e) => {
+                                                e.target.src = 'hero_user.jpg'; // Fallback if custom fails
+                                            }}
+                                        />
+                                    </div>
+
+                                    {/* The Shade Layer */}
+                                    <motion.div
+                                        className="absolute inset-x-0 top-0 z-30 pointer-events-none origin-top"
+                                        initial={false}
+                                        animate={{ height: `${100 - shadeHeight}%` }}
+                                        transition={{ type: "spring", stiffness: 45, damping: 25 }}
+                                    >
+                                        <div
+                                            className="absolute inset-0 transition-opacity duration-500"
+                                            style={{
+                                                ...getFabricStyle(shadeColor),
+                                                filter: shadeColor.name.startsWith('001') ? 'url(#fabricNoiseSubtle)' : 'url(#fabricNoise)',
+                                                opacity: shadeColor.cat === 'Napa' ? 0.98 : (1 - (openness / 100 * 0.8)),
+                                            }}
+                                        />
+                                        {/* Hem Bar (Precision Detail) */}
+                                        <div className="absolute bottom-0 w-full h-[4px] sm:h-[6px] bg-zinc-900 border-t border-white/20 shadow-2xl" />
+                                    </motion.div>
+
+                                    {/* Shade Name Overlay (Quick View) */}
+                                    <div className="absolute bottom-2 left-2 right-2 z-40 bg-black/60 backdrop-blur-md border border-white/5 p-1.5 rounded-lg text-center pointer-events-none">
+                                        <div className="text-[9px] text-white font-serif truncate">
+                                            {shadeColor.name.split(' ').slice(1).join(' ')}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* RIGHT FLANK: Transparency / Openness Matrix */}
+                                <div className="flex flex-col justify-between p-1 bg-black/40 rounded-2xl border border-white/5 w-10 sm:w-12 shadow-2xl backdrop-blur-md h-full shrink-0">
+                                    {[1, 3, 5, 10].map((val) => (
+                                        <button
+                                            key={val}
+                                            disabled={shadeColor.cat === 'Napa'}
+                                            onClick={() => setOpenness(val)}
+                                            className={`flex-1 flex items-center justify-center text-[9px] sm:text-[10px] font-black rounded-xl transition-all duration-300 active:scale-90 ${shadeColor.cat === 'Napa'
+                                                ? 'opacity-5 grayscale'
+                                                : openness === val
+                                                    ? 'bg-gold-500 text-black shadow-[0_0_10px_rgba(234,179,8,0.3)]'
+                                                    : 'text-gray-500 hover:text-white hover:bg-white/5'
+                                                }`}
+                                        >
+                                            {val}%
+                                        </button>
+                                    ))}
+                                    <div className="text-[7px] sm:text-[8px] uppercase tracking-tighter text-gray-600 font-bold text-center py-1 sm:py-2 [writing-mode:vertical-lr] shrink-0">
+                                        {lang === 'en' ? 'OPEN' : 'APER'}
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            {/* 3. BOTTOM: COLOR PICKER STRIP (Horizontal Precision) */}
+                            <div className="bg-black/40 p-2 sm:p-3 rounded-2xl border border-white/5 backdrop-blur-md shrink-0">
+                                <div className="flex gap-2 sm:gap-4 overflow-x-auto pb-2 px-1 scrollbar-none snap-x mask-fade-edges">
+                                    {filteredFabrics.map((f) => (
+                                        <button
+                                            key={f.name}
+                                            onClick={() => setShadeColor(f)}
+                                            className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center transition-all snap-center active:scale-90 ${shadeColor.name === f.name
+                                                ? 'ring-1 ring-gold-500 bg-white/10 scale-105 shadow-md'
+                                                : 'bg-white/5 hover:bg-white/10'
+                                                }`}
+                                        >
+                                            <div
+                                                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/10 shadow-inner"
+                                                style={getFabricStyle(f)}
+                                            />
+                                        </button>
+                                    ))}
+                                </div>
+                                <div className="text-center hidden sm:block">
+                                    <div className="flex items-center justify-center gap-2">
+                                        <div className="w-8 h-[1px] bg-gold-500/20" />
+                                        <span className="text-[8px] text-gray-500 uppercase tracking-[0.3em] font-black">
+                                            {shadeColor.cat === 'Basic' ? (lang === 'en' ? 'Selection' : 'Selección') : shadeColor.cat}
+                                        </span>
+                                        <div className="w-8 h-[1px] bg-gold-500/20" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Disclaimer Row (Full Width) */}
+                        <div className="mt-2 lg:mt-8 text-center shrink-0 hidden sm:block">
+                            <p className="text-[9px] lg:text-[10px] text-zinc-500 uppercase tracking-widest max-w-lg mx-auto">
+                                {lang === 'en'
+                                    ? "Simulation is approximate. Visit our local store for exact colors."
+                                    : "Simulación aproximada."}
+                            </p>
+                        </div>
+                    </div>
+                </section >
+            );
+        };
+
+        const FeatureCards = ({ lang }) => {
+            const features = [
+                {
+                    l: lang === 'en' ? "Extreme Engineering" : "Ingeniería Extrema",
+                    badLabel: lang === 'en' ? "Retailer Limitations" : "Limitaciones Comunes",
+                    bad: lang === 'en' ? "Fails > 100°F (Thermal shutdown)" : "Falla > 38°C (Apagado térmico)",
+                    goodLabel: lang === 'en' ? "Sun Air Superiority" : "Superioridad Sun Air",
+                    good: lang === 'en' ? "Industrial-Grade Heat Resistance (> 140°F)" : "Resistencia Térmica Industrial (> 60°C)",
                     icon: Icons.Zap
+                },
+                {
+                    l: lang === 'en' ? "Architectural Integration" : "Integración Arquitectónica",
+                    badLabel: lang === 'en' ? "Retailer Limitations" : "Limitaciones Comunes",
+                    bad: lang === 'en' ? "Visible battery packs & wires" : "Baterías y cables visibles",
+                    goodLabel: lang === 'en' ? "Sun Air Superiority" : "Superioridad Sun Air",
+                    good: lang === 'en' ? "Recessed pockets for invisible hardware" : "Bolsillos empotrados para hardware invisible",
+                    icon: Icons.EyeOff
+                },
+                {
+                    l: lang === 'en' ? "Structural Engineering" : "Ingeniería Estructural",
+                    badLabel: lang === 'en' ? "Retailer Limitations" : "Limitaciones Comunes",
+                    bad: lang === 'en' ? "Thin 60-70\" limits. Warping in humidity." : "Límites de 1.5m. Deformación con humedad.",
+                    goodLabel: lang === 'en' ? "Sun Air Superiority" : "Superioridad Sun Air",
+                    good: lang === 'en' ? "Modular spans up to 118\". Zero warping guarantee." : "Tramos modulares hasta 3m. Garantía cero deformación.",
+                    icon: Icons.Shield
+                },
+                {
+                    l: lang === 'en' ? "The Local Advantage" : "La Ventaja Local",
+                    badLabel: lang === 'en' ? "Retailer Limitations" : "Limitaciones Comunes",
+                    bad: lang === 'en' ? "Standardized imports with 8–12 week shipping delays." : "Importaciones estándar con retrasos de 8-12 semanas.",
+                    goodLabel: lang === 'en' ? "Sun Air Superiority" : "Superioridad Sun Air",
+                    good: lang === 'en' ? "Clearwater artisanal production. Superior quality control, delivered in half the time." : "Fabricación local en Clearwater. Control de calidad superior, entrega en la mitad del tiempo.",
+                    icon: Icons.MapPin
                 }
             ];
 
             return (
-                <section id="technology" className="py-24 md:py-48 bg-slate-950 relative overflow-hidden">
-                    <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
-                        <div className="space-y-8">
-                            <span className="text-gold-500 text-xs font-black uppercase tracking-[0.4em]">Proprietary Infrastructure</span>
-                            <h2 className="font-serif text-4xl md:text-6xl text-white leading-tight">
-                                Engineering for<br /> Coastal Resilience.
-                            </h2>
-                            <p className="text-slate-400 text-lg leading-relaxed max-w-xl">
-                                Florida's climate destroys standard motorized shades. Our hardwired low-voltage architecture eliminates the heat-sensitivity and fire risks of lithium batteries in sun-baked pockets.
-                            </p>
-                            <div className="pt-8">
-                                <div className="flex items-center gap-6 p-6 glass-panel border-l-4 border-l-gold-500">
-                                    <div className="text-3xl font-serif italic text-white underline decoration-gold-500/40">10-Day Install.</div>
-                                    <div className="text-sm text-slate-500 uppercase tracking-widest leading-loose">Vs 8-Week Global Imports</div>
-                                </div>
-                            </div>
+                <section className="py-16 md:py-32 bg-obsidian relative overflow-hidden">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[600px] bg-gold-600/5 blur-[120px] rounded-full pointer-events-none" />
+                    <div className="max-w-7xl mx-auto px-6 relative z-10">
+                        <div className="text-center mb-16 md:mb-20">
+                            <h2 className="font-serif text-3xl md:text-5xl text-white mb-4">{lang === 'en' ? 'Engineered for the Elite' : 'Ingeniería para la Élite'}</h2>
+                            <p className="text-gray-500 font-light max-w-xl mx-auto text-sm md:text-base">{lang === 'en' ? 'Where others reach their limit, Sun Air Shades begin. A comparison of architectural standards.' : 'Donde otros llegan a su límite, Sun Air Shades comienza. Una comparación de estándares arquitectónicos.'}</p>
                         </div>
 
-                        <div className="grid sm:grid-cols-2 gap-8 relative">
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] bg-gold-500/5 blur-[100px] pointer-events-none" />
-                            {items.map((item, i) => (
+                        {/* Row 1: Top 3 Cards */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
+                            {features.slice(0, 3).map((f, i) => (
                                 <motion.div
                                     key={i}
-                                    initial={{ opacity: 0, scale: 0.95 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: i * 0.2 }}
-                                    className={`p-10 rounded-2xl border ${item.type === 'good' ? 'bg-slate-900 border-gold-500/30' : 'bg-transparent border-white/5 opacity-60'} relative z-10 h-full`}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: i * 0.1 }}
+                                    className="glass-panel p-10 rounded-2xl border border-white/5 hover:border-gold-500/40 transition-all group"
                                 >
-                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-10 ${item.type === 'good' ? 'bg-gold-500 text-black' : 'bg-slate-800 text-slate-500'}`}>
-                                        <item.icon c="w-6 h-6" />
+                                    <div className="bg-gold-500/10 w-16 h-16 rounded-xl flex items-center justify-center mb-8 group-hover:bg-gold-500 transition-colors">
+                                        <f.icon c="w-8 h-8 text-gold-500 group-hover:text-black transition-colors" />
                                     </div>
-                                    <h4 className="text-2xl font-serif text-white mb-2">{item.title}</h4>
-                                    <p className="text-[10px] uppercase font-black tracking-widest text-slate-500 mb-8">{item.subtitle}</p>
-                                    <ul className="space-y-4">
-                                        {item.points.map((p, j) => (
-                                            <li key={j} className="flex items-start gap-4 text-sm text-slate-400 font-light">
-                                                <div className={`mt-1.5 w-1 h-1 rounded-full ${item.type === 'good' ? 'bg-gold-500' : 'bg-slate-600'}`} />
-                                                {p}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    <h3 className="font-serif text-2xl text-white mb-8">{f.l}</h3>
+
+                                    <div className="space-y-6">
+                                        <div className="border-l border-red-500/30 pl-4 py-1">
+                                            <span className="text-[10px] uppercase tracking-widest text-red-400 font-bold block mb-1">{f.badLabel}</span>
+                                            <p className="text-sm text-gray-500 font-light">{f.bad}</p>
+                                        </div>
+                                        <div className="border-l border-gold-500/30 pl-4 py-1">
+                                            <span className="text-[10px] uppercase tracking-widest text-gold-500 font-bold block mb-1">{f.goodLabel}</span>
+                                            <p className="text-sm text-white font-medium">{f.good}</p>
+                                        </div>
+                                    </div>
                                 </motion.div>
+                            ))}
+                        </div>
+
+                        {/* Row 2: Local Advantage + Mission Statement */}
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            {/* The Local Advantage Card (Takes 1 Col) */}
+                            {features.slice(3, 4).map((f, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.3 }}
+                                    className="glass-panel p-10 rounded-2xl border border-white/5 hover:border-gold-500/40 transition-all group"
+                                >
+                                    <div className="bg-gold-500/10 w-16 h-16 rounded-xl flex items-center justify-center mb-8 group-hover:bg-gold-500 transition-colors">
+                                        <f.icon c="w-8 h-8 text-gold-500 group-hover:text-black transition-colors" />
+                                    </div>
+                                    <h3 className="font-serif text-2xl text-white mb-8">{f.l}</h3>
+
+                                    <div className="space-y-6">
+                                        <div className="border-l border-red-500/30 pl-4 py-1">
+                                            <span className="text-[10px] uppercase tracking-widest text-red-400 font-bold block mb-1">{f.badLabel}</span>
+                                            <p className="text-sm text-gray-500 font-light">{f.bad}</p>
+                                        </div>
+                                        <div className="border-l border-gold-500/30 pl-4 py-1">
+                                            <span className="text-[10px] uppercase tracking-widest text-gold-500 font-bold block mb-1">{f.goodLabel}</span>
+                                            <p className="text-sm text-white font-medium">{f.good}</p>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
+
+                            {/* Our Mission Text (Takes 2 Cols) */}
+                            <div id="mission" className="lg:col-span-2 flex flex-col justify-center pl-0 lg:pl-12 mt-12 lg:mt-0 scroll-mt-32">
+                                <h3 className="text-gold-500 text-xs uppercase tracking-[0.3em] font-bold mb-6">{lang === 'en' ? 'Our Mission' : 'Nuestra Misión'}</h3>
+                                <p className="font-serif text-3xl md:text-4xl text-white leading-tight">
+                                    {lang === 'en'
+                                        ? '"At Sun Air Shades Studio, we specialize in high-quality interior and exterior shading systems designed to enhance comfort, privacy, and style. With years of experience serving both residential and commercial clients, our team takes pride in delivering exceptional craftsmanship with the fastest turnaround and installation in town."'
+                                        : '"En Sun Air Shades Studio, nos especializamos en cortinas automáticas de alta calidad para interiores y exteriores, diseñadas para mejorar el confort y la privacidad. Con años de experiencia en el sector residencial y comercial, nos enorgullece ofrecer una fabricación local personalizada con los tiempos de respuesta e instalación más rápidos de la ciudad."'}
+                                </p>
+                                <div className="h-1 w-24 bg-gold-500 mt-8" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+
+        const Reviews = ({ lang }) => {
+            const [index, setIndex] = useState(0);
+
+            const reviews = [
+                { n: "Julie Mahr", t: "Nate and his crew are exceptional! I trust them for even the most challenging project! Meticulous and proficient." },
+                { n: "Jim Bedingfield", t: "Terrific job by Nate and Sun Air Shades Studio. Responsive - fair priced - and thorough. Highly recommended." },
+                { n: "Jerem Shapiro", t: "5 star experience all around. Amazing products, service, and professionalism that exceeds any other shade business. Nate is a superstar!" },
+                { n: "Kevin", t: "Working with Sun Air Shades Studio was an amazing experience from start to finish. They were trustworthy, used high-quality materials, and made everything easy." },
+                { n: "Steve Tapia", t: "I’ve known Nate personally for several years... He truly is a top notch guy... You won’t be disappointed." },
+                { n: "Maria McCooey", t: "We had a great experience from beginning to end. Quality product at a great price. We highly recommend Sun Air Shades Studio." },
+                { n: "Carol Rodriguez", t: "Sun Air Shades Studio is the best. Nate is friendly and very helpful. I have use him 2 time and my friends also." },
+                { n: "Peter Streit", t: "If anyone out there is looking for shades for their home or business i can not recommend SUN AIR SHADES STUDIO ENOUGH!!!" },
+                { n: "Amelia Muadi", t: "5 Stars – Exceptional Service and Quality! I couldn’t be happier with my experience with Sun Air Shades Studio! The team was professional." }
+            ];
+
+            // Auto-advance
+            useEffect(() => {
+                const timer = setInterval(() => {
+                    setIndex((prev) => (prev + 1) % reviews.length);
+                }, 6000);
+                return () => clearInterval(timer);
+            }, [reviews.length]);
+
+            const next = () => setIndex((prev) => (prev + 1) % reviews.length);
+            const prev = () => setIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
+
+            return (
+                <section id="reviews" className="py-16 md:py-24 bg-zinc-950 border-t border-white/5 relative overflow-hidden">
+                    {/* Background Glow */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gold-600/5 blur-[100px] rounded-full pointer-events-none" />
+
+                    <div className="max-w-4xl mx-auto px-6 relative z-10">
+                        <div className="flex flex-col items-center text-center mb-12">
+                            <h2 className="font-serif text-3xl md:text-5xl text-white mb-4">{lang === 'en' ? 'Verified Client Stories' : 'Historias de Clientes Verificadas'}</h2>
+                            <p className="text-gray-500 font-light mb-8">{lang === 'en' ? "Real transformation from Florida's leading luxury homes." : "Transformación real de las principales casas de lujo de Florida."}</p>
+
+                            <a
+                                href="https://www.google.com/search?q=Sun+Air+Shades+Studio+Reviews"
+                                target="_blank"
+                                className="inline-flex items-center gap-2 text-[10px] text-gold-500 uppercase tracking-widest border border-gold-500/30 px-4 py-2 hover:bg-gold-500 hover:text-black transition-colors"
+                            >
+                                <Icons.Zap c="w-4 h-4" />
+                                {lang === 'en' ? 'Read on Google' : 'Leer en Google'}
+                            </a>
+                        </div>
+
+                        {/* Carousel Area */}
+                        <div className="relative min-h-[300px] flex items-center justify-center">
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    exit={{ opacity: 0, x: -20 }}
+                                    transition={{ duration: 0.5 }}
+                                    className="text-center"
+                                >
+                                    <div className="text-gold-500 mb-6 flex justify-center gap-1">
+                                        {[...Array(5)].map((_, i) => <span key={i}>★</span>)}
+                                    </div>
+                                    <p className="text-xl md:text-2xl text-gray-200 font-serif italic leading-relaxed mb-8 max-w-2xl mx-auto">
+                                        "{reviews[index].t}"
+                                    </p>
+                                    <div className="text-sm font-bold uppercase tracking-widest text-gold-500">
+                                        {reviews[index].n}
+                                    </div>
+                                    <div className="text-[10px] text-gray-500 uppercase tracking-wider mt-1">
+                                        {lang === 'en' ? 'Verified Customer' : 'Cliente Verificado'}
+                                    </div>
+                                </motion.div>
+                            </AnimatePresence>
+
+                            {/* Controls */}
+                            <button onClick={prev} className="absolute left-0 md:-left-12 top-1/2 -translate-y-1/2 p-4 text-gray-500 hover:text-gold-500 transition-colors">
+                                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 19l-7-7 7-7" /></svg>
+                            </button>
+                            <button onClick={next} className="absolute right-0 md:-right-12 top-1/2 -translate-y-1/2 p-4 text-gray-500 hover:text-gold-500 transition-colors">
+                                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 5l7 7-7 7" /></svg>
+                            </button>
+                        </div>
+
+                        {/* Indicators */}
+                        <div className="flex justify-center gap-2 mt-8">
+                            {reviews.map((_, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setIndex(i)}
+                                    className={`w-1.5 h-1.5 rounded-full transition-all ${i === index ? 'bg-gold-500 w-4' : 'bg-gray-700 hover:bg-gray-500'}`}
+                                />
                             ))}
                         </div>
                     </div>
@@ -299,179 +1388,283 @@
             );
         };
 
-        const VisualizerWrapper = () => {
-            const [shadeHeight, setShadeHeight] = useState(40);
+        const Partners = ({ lang }) => {
+            const brands = [
+                { name: "SOMFY", sub: "Motorization" },
+                { name: "LUTRON", sub: "Integration" },
+                { name: "CRESTRON", sub: "Automation" },
+                { name: "CONTROL4", sub: "Smart Home" }
+            ];
 
             return (
-                <section id="visualizer" className="py-24 md:py-48 bg-slate-900 relative overflow-hidden">
-                    <div className="max-w-7xl mx-auto px-6">
-                        <div className="text-center mb-24">
-                            <h2 className="font-serif text-4xl md:text-6xl text-white mb-8">Pure View Visualizer</h2>
-                            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-                                Real-time physics simulation of our elite Lanai fabrics. Standard and total privacy modes optimized for Florida sunset exposures.
-                            </p>
-                        </div>
-
-                        <div className="max-w-5xl mx-auto glass-panel p-8 md:p-20 rounded-[3rem] shadow-2xl relative">
-                            {/* Visualizer Frame */}
-                            <div className="aspect-square md:aspect-video w-full rounded-2xl overflow-hidden relative border border-white/5 bg-slate-950">
-                                <img src="visualizer_sunset.png?v=2" className="absolute inset-0 w-full h-full object-cover opacity-80" alt="Backdrop" />
-
-                                <motion.div
-                                    className="absolute inset-x-0 top-0 z-20 pointer-events-none"
-                                    animate={{ height: `${shadeHeight}%` }}
-                                    transition={{ type: "spring", stiffness: 40, damping: 20 }}
-                                >
-                                    <div className="w-full h-full bg-slate-100 opacity-90 backdrop-blur-[2px]" style={{ backgroundImage: 'radial-gradient(#94a3b8 1px, transparent 1px)', backgroundSize: '4px 4px' }} />
-                                    <div className="absolute bottom-0 w-full h-3 bg-slate-950 border-t border-white/10" />
-                                </motion.div>
-                            </div>
-
-                            {/* Control Bar */}
-                            <div className="mt-16 flex flex-col md:flex-row items-center gap-12">
-                                <div className="flex-1 w-full space-y-4">
-                                    <div className="flex justify-between text-[10px] uppercase font-black tracking-widest text-slate-500">
-                                        <span>Shade Deployment</span>
-                                        <span className="text-gold-500">{shadeHeight}%</span>
-                                    </div>
-                                    <input
-                                        type="range" value={shadeHeight} onChange={(e) => setShadeHeight(e.target.value)}
-                                        className="w-full h-1.5 bg-slate-800 rounded-full appearance-none accent-gold-500 cursor-pointer"
-                                    />
+                <section className="py-12 bg-zinc-950 border-b border-white/5">
+                    <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 opacity-70 hover:opacity-100 transition-opacity">
+                        <span className="text-[10px] uppercase tracking-[0.3em] text-gold-500 font-bold block md:block">
+                            {lang === 'en' ? 'Trusted Partners' : 'Socios de Confianza'}
+                        </span>
+                        <div className="flex flex-wrap justify-center gap-12 md:gap-20">
+                            {brands.map((b, i) => (
+                                <div key={i} className="flex flex-col items-center group cursor-default">
+                                    <span className="text-2xl font-serif text-white/40 group-hover:text-white transition-colors duration-500">{b.name}</span>
+                                    <span className="text-[9px] uppercase tracking-wider text-white/20 group-hover:text-gold-500 transition-colors mt-1">{b.sub}</span>
                                 </div>
-                                <div className="flex gap-4">
-                                    {[10, 40, 70, 100].map(h => (
-                                        <button key={h} onClick={() => setShadeHeight(h)} className={`w-12 h-12 rounded-xl text-[10px] font-bold border transition-all ${shadeHeight === h ? 'bg-white text-black border-white' : 'border-white/10 text-slate-500'}`}>
-                                            {h}%
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </section>
             );
         };
 
-        const Contact = () => {
-            const [status, setStatus] = useState('idle'); // idle, loading, success
+        const Footer = ({ lang, togglePrivacy }) => {
+            const [formStatus, setFormStatus] = useState('idle'); // idle, submitting, success
 
             const handleSubmit = async (e) => {
-                e.preventDefault();
-                setStatus('loading');
-
-                // Simulate Supabase/Netlify Submission
-                setTimeout(() => setStatus('success'), 1500);
+                if (window.sasStudio && window.sasStudio.handleSubmit) {
+                    setFormStatus('submitting');
+                    await window.sasStudio.handleSubmit(e, lang);
+                    setFormStatus('success');
+                } else {
+                    // Legacy fallback
+                    e.preventDefault();
+                    setFormStatus('submitting');
+                    const formData = new FormData(e.target);
+                    const data = new URLSearchParams(formData).toString();
+                    try {
+                        await fetch("/", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                            body: data,
+                        });
+                        setFormStatus('success');
+                    } catch (error) {
+                        setFormStatus('success');
+                    }
+                }
             };
 
             return (
-                <section id="contact" className="py-24 md:py-48 bg-slate-950 border-t border-white/5 relative">
-                    <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center">
-                        <div className="space-y-12">
-                            <h2 className="font-serif text-4xl md:text-7xl text-white underline decoration-gold-500/20">
-                                Measure once, install forever.
-                            </h2>
-                            <p className="text-slate-400 text-xl leading-relaxed font-light">
-                                Your home deserves a specialized architectural audit. Our consultants provide exact wind-load analysis and material selection on-site.
-                            </p>
-                            <div className="space-y-6">
-                                <div className="flex items-center gap-6">
-                                    <div className="w-12 h-12 rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500">1</div>
-                                    <span className="text-sm uppercase tracking-widest font-bold">Request Strategy Audit</span>
-                                </div>
-                                <div className="flex items-center gap-6">
-                                    <div className="w-12 h-12 rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500">2</div>
-                                    <span className="text-sm uppercase tracking-widest font-bold">Precision Laser Measurement</span>
-                                </div>
-                                <div className="flex items-center gap-6">
-                                    <div className="w-12 h-12 rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500">3</div>
-                                    <span className="text-sm uppercase tracking-widest font-bold">White-Glove Installation</span>
-                                </div>
-                            </div>
-                        </div>
+                <footer id="contact" className="bg-zinc-950 py-16 md:py-24 border-t border-white/5 relative overflow-hidden">
+                    {/* Background Glow */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl bg-gold-600/5 blur-[120px] rounded-full pointer-events-none" />
 
-                        <div className="glass-panel p-10 md:p-16 rounded-[2rem] shadow-2xl relative overflow-hidden">
-                            {status === 'success' ? (
-                                <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-10 space-y-6">
-                                    <Icons.CheckCircle c="w-20 h-20 text-gold-500 mx-auto" />
-                                    <h3 className="text-3xl font-serif text-white">Project Initialized.</h3>
-                                    <p className="text-slate-400">An architect will contact you within 4 business hours to finalize your on-site measurement.</p>
-                                    <button onClick={() => setStatus('idle')} className="text-xs uppercase font-bold text-gold-500 hover:text-white transition-colors tracking-widest underline">Submit another request</button>
+                    <div className="max-w-xl mx-auto px-6 text-center relative z-10">
+                        <h2 className="font-serif text-4xl text-white mb-4">{lang === 'en' ? 'Secure Your Project' : 'Inicie Su Proyecto'}</h2>
+                        <p className="text-gray-500 font-light mb-12">
+                            {lang === 'en' ? 'Direct factory access. Personalized attention.' : 'Acceso directo a fábrica. Atención personalizada.'}
+                        </p>
+
+                        <div className="bg-zinc-900/50 backdrop-blur-md border border-white/10 p-6 sm:p-8 rounded-sm shadow-2xl">
+                            {formStatus === 'success' ? (
+                                <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="py-12">
+                                    <Icons.Check c="w-16 h-16 text-gold-500 mx-auto mb-6" />
+                                    <h3 className="text-xl text-white font-serif mb-2">{lang === 'en' ? 'Request Initialized' : 'Solicitud Iniciada'}</h3>
+                                    <p className="text-sm text-gray-400 max-w-xs mx-auto mb-8">
+                                        {lang === 'en' ? 'Our team has been notified. You can now explore our full catalog on the official site.' : 'Nuestro equipo ha sido notificado. Ahora puede explorar nuestro catálogo completo en el sitio oficial.'}
+                                    </p>
+                                    <div className="flex flex-col gap-4 items-center">
+                                        <a href="https://www.sunair-shades.com" className="bg-gold-500 text-black px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-all">
+                                            {lang === 'en' ? 'Go to Official Site' : 'Ir al Sitio Oficial'}
+                                        </a>
+                                        <button onClick={() => setFormStatus('idle')} className="text-[9px] uppercase text-gray-500 hover:text-white tracking-widest underline">
+                                            {lang === 'en' ? 'Send Another Request' : 'Enviar Otra Solicitud'}
+                                        </button>
+                                    </div>
                                 </motion.div>
                             ) : (
-                                <form onSubmit={handleSubmit} className="space-y-6">
-                                    <div className="grid sm:grid-cols-2 gap-6">
-                                        <div className="space-y-2">
-                                            <label className="text-[10px] uppercase tracking-widest font-black text-slate-500 ml-1">Your Name</label>
-                                            <input required type="text" className="w-full bg-slate-900 border border-white/5 p-5 text-white outline-none focus:border-gold-500 transition-all font-light" />
-                                        </div>
-                                        <div className="space-y-2">
-                                            <label className="text-[10px] uppercase tracking-widest font-black text-slate-500 ml-1">Phone</label>
-                                            <input required type="tel" className="w-full bg-slate-900 border border-white/5 p-5 text-white outline-none focus:border-gold-500 transition-all font-light" />
-                                        </div>
+                                <form
+                                    className="space-y-4 text-left"
+                                    onSubmit={handleSubmit}
+                                    name="quote-request"
+                                    data-netlify="true"
+                                >
+                                    <input type="hidden" name="form-name" value="quote-request" />
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <input type="text" name="name" placeholder={lang === 'en' ? 'Name' : 'Nombre'} required className="w-full bg-black/50 border border-white/10 text-white p-4 text-sm focus:border-gold-500 outline-none transition-colors" />
+                                        <input type="text" name="phone" placeholder={lang === 'en' ? 'Phone' : 'Teléfono'} className="w-full bg-black/50 border border-white/10 text-white p-4 text-sm focus:border-gold-500 outline-none transition-colors" />
                                     </div>
-                                    <div className="space-y-2">
-                                        <label className="text-[10px] uppercase tracking-widest font-black text-slate-500 ml-1">Email Address</label>
-                                        <input required type="email" className="w-full bg-slate-900 border border-white/5 p-5 text-white outline-none focus:border-gold-500 transition-all font-light" />
+
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <select name="area" required className="w-full bg-black/50 border border-white/10 text-gray-400 p-4 text-sm focus:border-gold-500 outline-none transition-colors appearance-none cursor-pointer">
+                                            <option value="" disabled selected>{lang === 'en' ? 'Project Area' : 'Área del Proyecto'}</option>
+                                            <option>{lang === 'en' ? 'Living Room' : 'Sala de Estar'}</option>
+                                            <option>{lang === 'en' ? 'Dining Room' : 'Comedor'}</option>
+                                            <option>{lang === 'en' ? 'Bedroom' : 'Dormitorio'}</option>
+                                            <option>{lang === 'en' ? 'Home Office' : 'Oficina en Casa'}</option>
+                                            <option>{lang === 'en' ? 'Patio / Exterior' : 'Patio / Exterior'}</option>
+                                            <option>{lang === 'en' ? 'Full Home' : 'Casa Completa'}</option>
+                                        </select>
+                                        <select name="budget" required className="w-full bg-black/50 border border-white/10 text-gray-400 p-4 text-sm focus:border-gold-500 outline-none transition-colors appearance-none cursor-pointer">
+                                            <option value="" disabled selected>{lang === 'en' ? 'Budget Bracket' : 'Rango de Presupuesto'}</option>
+                                            <option>$1,000 - $5,000</option>
+                                            <option>$5,000 - $15,000</option>
+                                            <option>$15,000 - $50,000</option>
+                                            <option>$50,000 - $100,000</option>
+                                            <option>$100,000+</option>
+                                        </select>
                                     </div>
-                                    <div className="space-y-2">
-                                        <label className="text-[10px] uppercase tracking-widest font-black text-slate-500 ml-1">Project Note</label>
-                                        <textarea rows="3" className="w-full bg-slate-900 border border-white/5 p-5 text-white outline-none focus:border-gold-500 transition-all font-light resize-none" placeholder="E.g. Full home automation, Lanai screen..."></textarea>
-                                    </div>
-                                    <button disabled={status === 'loading'} className="w-full bg-white text-black py-6 text-[10px] font-black uppercase tracking-[0.4em] hover:bg-gold-500 hover:text-white transition-all transform hover:-translate-y-1 shadow-2xl">
-                                        {status === 'loading' ? 'Encrypting Request...' : 'Schedule Strategy Audit'}
+
+                                    <input type="email" name="email" placeholder={lang === 'en' ? 'Email Address' : 'Correo Electrónico'} required className="w-full bg-black/50 border border-white/10 p-4 text-white text-sm placeholder-gray-500 focus:border-gold-500 outline-none transition-colors" />
+                                    <textarea name="message" rows="3" placeholder={lang === 'en' ? 'Tell us about your project...' : 'Cuéntenos sobre su proyecto...'} className="w-full bg-black/50 border border-white/10 p-4 text-white text-sm placeholder-gray-500 focus:border-gold-500 outline-none transition-colors"></textarea>
+
+                                    <button type="submit" disabled={formStatus === 'submitting'} className="w-full bg-white text-black py-4 uppercase tracking-widest font-bold text-xs hover:bg-gold-500 hover:text-white transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed">
+                                        {formStatus === 'submitting' ? (lang === 'en' ? 'Processing...' : 'Procesando...') : (lang === 'en' ? 'Request Consultation' : 'Solicitar Consulta')}
                                     </button>
-                                    <p className="text-[9px] text-slate-600 uppercase text-center tracking-widest">Confidential on-site analysis | Local Florida Team</p>
                                 </form>
                             )}
                         </div>
+
+                        <div className="mt-16 border-t border-white/10 pt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center md:text-left text-xs uppercase tracking-widest leading-loose text-gray-400">
+
+                            {/* 1. Contact Info */}
+                            <div>
+                                <h4 className="text-white font-bold mb-4">{lang === 'en' ? 'Contact' : 'Contacto'}</h4>
+                                <p>2015 Weaver Park Dr,<br />Clearwater, FL 33765</p>
+                                <a href="tel:7277545267" className="block hover:text-gold-500 transition-colors mt-2">(727) 754-5267</a>
+                                <a href="mailto:admin@sunair-shades.com" className="block hover:text-gold-500 transition-colors">admin@sunair-shades.com</a>
+                            </div>
+
+                            {/* 2. Business Hours */}
+                            <div>
+                                <h4 className="text-white font-bold mb-4">{lang === 'en' ? 'Hours' : 'Horario'}</h4>
+                                <div className="space-y-1">
+                                    <div className="flex justify-between md:justify-start gap-4">
+                                        <span>{lang === 'en' ? 'Mon - Fri' : 'Lun - Vie'}</span>
+                                        <span className="text-white">9 AM – 3 PM</span>
+                                    </div>
+                                    <div className="flex justify-between md:justify-start gap-4">
+                                        <span>{lang === 'en' ? 'Sat - Sun' : 'Sáb - Dom'}</span>
+                                        <span className="text-white">Closed</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* 3. Socials */}
+                            <div>
+                                <h4 className="text-white font-bold mb-4">{lang === 'en' ? 'Follow Us' : 'Síguenos'}</h4>
+                                <div className="flex justify-center md:justify-start gap-6">
+                                    <a href="https://www.facebook.com/profile.php?id=61573881285729" target="_blank" className="hover:text-gold-500 transition-colors">Facebook</a>
+                                    <a href="https://www.instagram.com/sunairshades2025/" target="_blank" className="hover:text-gold-500 transition-colors">Instagram</a>
+                                    <a href="https://www.youtube.com/channel/UCNx--JOvrlMhKoBsjYua5hQ" target="_blank" className="hover:text-gold-500 transition-colors">YouTube</a>
+                                </div>
+                                <div className="mt-8">
+                                    <a href="https://www.sunair-shades.com" target="_blank" className="text-gold-500 hover:text-white border border-gold-500/20 px-4 py-2 text-[9px] font-bold uppercase tracking-widest transition-all inline-block">
+                                        Visit Corporate Website →
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className="mt-12 text-gray-600 text-[10px] uppercase tracking-widest text-center flex flex-col items-center gap-4">
+                            <div>
+                                © 2026 Sunair Shades. All Rights Reserved.
+                                <span className="mx-2 md:mx-4 hidden md:inline">•</span>
+                                <br className="md:hidden" />
+                                <button onClick={togglePrivacy} className="mt-2 md:mt-0 hover:text-gold-500 transition-colors">
+                                    {lang === 'en' ? 'Privacy Policy' : 'Política de Privacidad'}
+                                </button>
+                            </div>
+
+                            <div className="pt-8 border-t border-white/5 w-full transition-opacity hover:opacity-100 opacity-70">
+                                <a href="https://nivopartners.com" target="_blank" className="flex items-center justify-center gap-3 group">
+                                    <span className="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-medium mr-2">{lang === 'en' ? 'Engineered by' : 'Diseñado por'}</span>
+                                    <div className="flex items-center bg-black/40 p-1.5 px-3 rounded border border-white/5 group-hover:border-blue-500/30 transition-all">
+                                        <div className="w-5 h-5 bg-zinc-800 rounded flex items-center justify-center mr-3 border border-white/10 shadow-inner">
+                                            <span className="text-[8px] font-black text-white">NP</span>
+                                        </div>
+                                        <span className="text-sm font-black tracking-tighter text-white uppercase italic">NIVO</span>
+                                        <span className="text-sm font-black tracking-tighter text-blue-500 uppercase italic ml-0.5">PARTNERS</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </section>
+                </footer>
+            );
+        };
+
+        const PrivacyPolicyModal = ({ isOpen, onClose, lang }) => {
+            if (!isOpen) return null;
+            return (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+                    <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose} />
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        className="relative bg-zinc-900 border border-white/10 rounded-2xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto shadow-2xl"
+                    >
+                        <button onClick={onClose} className="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors">
+                            <Icons.X c="w-6 h-6" />
+                        </button>
+                        <h2 className="font-serif text-2xl text-white mb-6">
+                            {lang === 'en' ? 'Privacy Policy' : 'Política de Privacidad'}
+                        </h2>
+                        <div className="space-y-4 text-sm text-gray-400 font-light leading-relaxed text-justify">
+                            <p>
+                                {lang === 'en'
+                                    ? "At Sunair Shades, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect the personal information you provide when visiting our website or using our services."
+                                    : "En Sunair Shades, su privacidad es importante para nosotros. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos la información personal que proporciona al visitar nuestro sitio web o utilizar nuestros servicios."}
+                            </p>
+                            <p>
+                                {lang === 'en'
+                                    ? "We may collect information such as your name, phone number, email address, and service preferences when you fill out contact forms, request quotes, or make purchases. This information is used solely to provide our services, process orders, and communicate with you regarding your requests."
+                                    : "Podemos recopilar información como su nombre, número de teléfono, dirección de correo electrónico y preferencias de servicio cuando completa formularios de contacto, solicita cotizaciones o realiza compras. Esta información se utiliza únicamente para proporcionar nuestros servicios, procesar pedidos y comunicarnos con usted respecto a sus solicitudes."}
+                            </p>
+                            <p>
+                                {lang === 'en'
+                                    ? "Sunair Shades does not sell or share your personal information with third parties, except when necessary to complete a transaction or comply with legal obligations. We take reasonable steps to safeguard your data through secure systems and encrypted communication."
+                                    : "Sunair Shades no vende ni comparte su información personal con terceros, excepto cuando sea necesario para completar una transacción o cumplir con obligaciones legales. Tomamos medidas razonables para proteger sus datos a través de sistemas seguros y comunicaciones cifradas."}
+                            </p>
+                            <p>
+                                {lang === 'en'
+                                    ? "By using our website, you consent to the terms outlined in this Privacy Policy. We reserve the right to update or modify this policy at any time, and any changes will be posted on this page."
+                                    : "Al utilizar nuestro sitio web, usted acepta los términos descritos en esta Política de Privacidad. Nos reservamos el derecho de actualizar o modificar esta política en cualquier momento, y cualquier cambio se publicará en esta página."}
+                            </p>
+                            <div className="mt-8 pt-6 border-t border-white/5 text-[10px] text-gray-500 uppercase tracking-widest">
+                                {lang === 'en' ? 'Contact Support:' : 'Soporte de Privacidad:'} admin@sunair-shades.com
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
             );
         };
 
         const App = () => {
+            const [lang, setLang] = useState('en');
+            const [privacyOpen, setPrivacyOpen] = useState(false);
+
+            useEffect(() => {
+                if (window.sasChat) {
+                    window.sasChat.setLanguage(lang);
+                }
+            }, [lang]);
+
             return (
-                <main className="bg-slate-950 font-sans">
-                    <Navbar />
-                    <Hero />
-                    <Comparison />
-                    <VisualizerWrapper />
-                    <section className="py-24 bg-slate-900 border-y border-white/5 overflow-hidden relative">
-                        <div className="absolute top-0 right-0 p-20 gold-glow blur-3xl opacity-10" />
-                        <div className="max-w-7xl mx-auto px-6 text-center">
-                            <h2 className="text-3xl font-serif text-white mb-12">Approved by Florida's Elite Builders</h2>
-                            <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-40 hover:opacity-100 transition-all">
-                                {["SOMFY", "LUTRON", "CONTROL4", "CRESTRON"].map(brand => (
-                                    <span key={brand} className="text-2xl font-black tracking-widest grayscale">{brand}</span>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
-                    <Contact />
-                    <footer className="py-20 bg-black text-center border-t border-white/5">
-                        <div className="max-w-7xl mx-auto px-6 space-y-10">
-                            <div className="flex flex-col md:flex-row justify-between items-center gap-8 border-b border-white/5 pb-10">
-                                <div className="text-lg font-black tracking-widest text-slate-500">SUNAIR<span className="text-white/20">SHADES</span></div>
-                                <div className="flex gap-10 text-[10px] uppercase font-bold tracking-widest text-slate-700">
-                                    <a href="#" className="hover:text-gold-500 transition-colors">Privacy</a>
-                                    <a href="#" className="hover:text-gold-500 transition-colors">Terms</a>
-                                    <a href="#" className="hover:text-gold-500 transition-colors">Security</a>
-                                </div>
-                            </div>
-                            <div className="text-[10px] text-slate-800 uppercase tracking-widest">
-                                © 2026 Sunair Shades Studio. Built locally in Clearwater, FL.<br />
-                                Engineered by <span className="text-slate-600 font-black">NIVO PARTNERS</span>
-                            </div>
-                        </div>
-                    </footer>
-                </main>
+                <div className="antialiased">
+                    <Navbar lang={lang} setLang={setLang} />
+                    <main>
+                        <Hero lang={lang} />
+                        <Partners lang={lang} />
+                        <SolutionEcosystem lang={lang} />
+                        <TechnologyShowcase lang={lang} />
+
+                        <FeatureCards lang={lang} />
+                        <Reviews lang={lang} />
+                        <Visualizer lang={lang} />
+                    </main>
+                    <Footer lang={lang} togglePrivacy={() => setPrivacyOpen(true)} />
+
+                    <PrivacyPolicyModal isOpen={privacyOpen} onClose={() => setPrivacyOpen(false)} lang={lang} />
+                </div>
             );
         };
+
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
     </script>
+    <script src="js/contact.js"></script>
+    <script src="js/chat.js"></script>
 </body>
 
 </html>
