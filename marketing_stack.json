@@ -1,0 +1,71 @@
+{
+    "project": "Sun Air Shades Studio",
+    "methodology": "Quality Bridge (3 Pillars)",
+    "stack": {
+        "marketing_front_end": [
+            {
+                "id": "ga4",
+                "name": "Google Analytics 4",
+                "purpose": "Quantitative Measurement"
+            },
+            {
+                "id": "meta_pixel",
+                "name": "Meta Pixel",
+                "purpose": "Retargeting & Attribution"
+            },
+            {
+                "id": "clarity",
+                "name": "Microsoft Clarity",
+                "purpose": "Qualitative Heatmaps & Recordings"
+            },
+            {
+                "id": "gtm",
+                "name": "Google Tag Manager",
+                "purpose": "Central script orchestration"
+            },
+            {
+                "id": "linkedin_insight",
+                "name": "LinkedIn Insight Tag",
+                "purpose": "B2B Analytics"
+            },
+            {
+                "id": "search_console",
+                "name": "Google Search Console",
+                "purpose": "Organic Health & SEO"
+            }
+        ],
+        "infrastructure_back_end": [
+            {
+                "id": "n8n",
+                "name": "n8n",
+                "purpose": "Enterprise Workflow Orchestration"
+            },
+            {
+                "id": "postgres",
+                "name": "PostgreSQL (Supabase)",
+                "purpose": "Sovereign Lead Database"
+            },
+            {
+                "id": "portainer",
+                "name": "Portainer",
+                "purpose": "Docker Container Management"
+            },
+            {
+                "id": "redis",
+                "name": "Redis",
+                "purpose": "Queue Acceleration for n8n"
+            },
+            {
+                "id": "traefik_nginx",
+                "name": "Traefik/Nginx",
+                "purpose": "Proxy Inverso, SSL & Hosting"
+            },
+            {
+                "id": "uptime_kuma",
+                "name": "Uptime Kuma",
+                "purpose": "24/7 Availability Monitoring"
+            }
+        ]
+    },
+    "hosting_strategy": "Zero-cost allocation using existing GCP VM (Nginx/Traefik). Domain managed via Cloudflare."
+}
