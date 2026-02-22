@@ -1057,7 +1057,7 @@
                                         `}} />
                                     </div>
                                     <div className="text-[10px] text-white font-mono bg-black px-2 py-1 rounded border border-white/10 z-10 mb-2">
-                                        {100 - shadeHeight}%
+                                        {shadeHeight}%
                                     </div>
                                 </div>
 
@@ -1079,7 +1079,7 @@
                                     <motion.div
                                         className="absolute inset-x-0 top-0 z-30 pointer-events-none origin-top"
                                         initial={false}
-                                        animate={{ height: `${shadeHeight}%` }}
+                                        animate={{ height: `${100 - shadeHeight}%` }}
                                         transition={{ type: "spring", stiffness: 45, damping: 25 }}
                                     >
                                         <div
