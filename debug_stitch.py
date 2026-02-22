@@ -1,7 +1,7 @@
 import requests
 import sys
 
-API_KEY = "AQ.Ab8RN6InRlufHMaWlmEsK2bk3TQNrwOsQ6pvJr5Ox4e51LQsfw"
+API_KEY = "YOUR_GCP_API_KEY_HERE"
 BASE_URL = "https://stitch.googleapis.com"
 PATHS = [
     "/mcp",
